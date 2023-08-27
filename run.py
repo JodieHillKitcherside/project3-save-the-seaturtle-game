@@ -35,8 +35,6 @@ class wrongKey(KeyError):
     pass
 
 
-def exit():
-
 if __name__ == "__main__":
     # Print introductory text,
     # Ask user to input name 
@@ -72,7 +70,7 @@ def introScene():
 
 
 def oaxacaBeach():
-    # Present option for left "arriving at Oaxaca Beach"
+    # Present option for right "arriving at Oaxaca Beach"
     # Set function for vulturesLurk with options to select
     # Call functions for babiesSafe and fleeExit
     print("Wow mama! You have many eggs to lay, you've ended up swimming to Oaxaca Beach! Lets see if you can protect them all!")
@@ -80,12 +78,12 @@ def oaxacaBeach():
         print("Watch out! Vultures are out to attact!")
         print(name + "Select your next option: Up or Right!")
         userInput = input()
-            if userInput == "Up":
-                fleeExit()
-            elif userInput == "Right":
-                babiesSafe()
-            else:
-                print("Please enter valid key option for the Save the Sea Turtle Game.")
+        if userInput == "Up":
+            fleeExit()
+        elif userInput == "Right":
+            babiesSafe()
+        else:
+            print("Please enter valid key option for the Save the Sea Turtle Game.")
 
 
 def babiesSafe(exit):
@@ -103,25 +101,45 @@ def gillnetRescue():
     # Set function for rescueExit 
     # Call function for rescueExit 
     print("Oh no! Unfortunatley you have been accidentally captured by gillnets! Fishermen are so sorry and have called ocean rescue!")
-        def rescueExit(exit):
-            print("Yay! The rescue team are taking you to rehab, looks like your injuries will be fixed and you are going back to the open ocean!")
-            exit()
-        rescueExit()
+    def rescueExit(exit):
+        print("Yay! The rescue team are taking you to rehab, looks like your injuries will be fixed and you are going back to the open ocean!")
+        exit()
+    rescueExit()   
 
 
-def tangedExit(exit)
+def tangedExit(exit):
     # Present option for down "bad storms mean you're tangled"
     # Call function for Exit 
     print("Bad storms mean that fishermens nets are no longer drying on the beach and made it in to the water! Ooops, you got tangled. You are on your own in the deep ocean and nobody can help this time! :(")
+    exit()
+
+
+def swimWithFriends():
+    # Present option for left "still peacefully swimming"
+    def greatWhite():
+        print("Can you hide from the great white shark? He's spotted you!")
+        print(name + "Select your next option: Up or Left!")
+        userInput = input()
+        if userInput == "Up":
+            sharkBaitExit()
+        elif userInput == "Left":
+            freedomExit()
+        else:
+            print("Please enter valid key option for the Save the Sea Turtle Game.")
+        def sharkBait(exit):
+            print("He got you! You tried to get away but he's too fast. You're dead.")
             exit()
-
-
-def swimWithFriends()
-    def greatWhite()
-        def sharkBait(exit)
+        def freedomExit(exit):
+            print("You swam up and out of sight! You are free.")
             exit()
-        def freedomExit(exit)
-            exit()
+    greatWhite()
 
 
-#main() 
+
+def exit(introScene, main):
+    print("Well done on getting that far. I'm sure you've worked out by now that unfortunately sea turtles face many threats to their survival, and although some are natural - most are human threats.")
+    print("If you survived, you're made of strong stuff. It's estimated that only 1 in 1000 sea turtles make it to adult turtle.")
+    introScene()
+
+
+main() 
