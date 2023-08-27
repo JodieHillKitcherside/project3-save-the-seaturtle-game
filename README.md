@@ -30,6 +30,8 @@ This is a basic structure plan for the code, mapping out the necessary functions
 
 ## Features left to implement
 
+- Key option 'back', to alow the user to go back and try other options. 
+
 The text-based game could be further developed with images and a more detailed storyline, as with an RPG, like many other nintendo games (Super Mario, Animal Crossing, Legend of Zelda) ideal for the nintendo switch. 
 In order to enable this, the storyline would need to be simplified, add mutliple characters and update the functionality. Main character would be identified rather than asking a user to assign a name, and the story would start by introducing this character.
 
