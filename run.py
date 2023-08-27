@@ -35,7 +35,7 @@ class wrongKey(KeyError):
     pass
 
 
-def exit()
+def exit():
 
 if __name__ == "__main__":
 # Print introductory text,
@@ -49,7 +49,7 @@ if __name__ == "__main__":
     print("Which way will you go next?")
     print("Options(Key) - Up, down, Left, Right")
 
-def introScene()
+def introScene():
 # Add options for directions the user/ player can choose from
 # Ask user to select key
     directions = ["down", "up", "left", "right"]
@@ -59,24 +59,43 @@ def introScene()
     while userInput not in directions:
             print("Options(Key) - Up/ Down/ Left/ Right")
             userInput = input()
-            if userInput = "Up":
+            if userInput == "Up":
                 gillnetRescue()
-            elif userInput = "Down":
+            elif userInput == "Down":
                 tangedExit()
-            elif userInput = "Left":
+            elif userInput == "Left":
                 oaxacaBeach()
-            elif userInput = "Right":
+            elif userInput == "Right":
                 swimWithFriends()
             else:
                 print("Please enter valid key option for the Save the Sea Turtle Game.")
 
 
-def oaxacaBeach()
-    def vultureLurk()
-        def babiesSafe()
-            exit()
-        def fleeExit()
-            exit()
+def oaxacaBeach():
+# Present option for left "arriving at Oaxaca Beach"
+# Set function for vulturesLurk with options to select
+# Call functions for babiesSafe and fleeExit
+    print("Wow mama! You have many eggs to lay, you've ended up swimming to Oaxaca Beach! Lets see if you can protect them all!")
+    def vultureLurk():
+        print("Watch out! Vultures are out to attact!")
+        print(name + "Select your next option: Up or Right!")
+        userInput = input()
+            if userInput == "Up":
+                fleeExit()
+            elif userInput == "Right":
+                babiesSafe()
+            else:
+                print("Please enter valid key option for the Save the Sea Turtle Game.")
+
+
+def babiesSafe(exit)
+    print("Phew! You dug a deep nest and all the babies are safe! You tried so hard in the heat and wading through the thick sand. Amazing, you have 100 baby turtle eggs protected!")
+    exit()
+
+
+def fleeExit(exit)
+    print("Vultures visciously circled and you quickly fled back to the ocean! You're so lucky! You made it back to ride the tide and can try again tomorrow.")
+    exit()
 
 
 def gillnetRescue()
