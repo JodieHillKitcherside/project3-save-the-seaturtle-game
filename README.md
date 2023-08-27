@@ -50,6 +50,8 @@ Allowing the game to become a RPG would simplify the storyline and make this mor
 
 ### Solved Bugs
 
+Terminal identified a number of indentation errors - quickly resolved with human eye. 
+
 ### Unsolved Bugs
 
 ## Deployment
