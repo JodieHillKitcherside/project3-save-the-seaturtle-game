@@ -56,14 +56,21 @@ Allowing the game to become a RPG would simplify the storyline and make this mor
 
 ## Credits
 
-### Inspired websites and tutor/mentor suggestions
+### Inspired websites/ books
+Python Tricks The Book - Dan Bader 
+- 4:3 Defining your own Exception Classes
+- 2:4 Underscores, dunders and more  
+
+Invent Your Own Computer Games With Python - Al Sweigart 
+- 5 : Dragon Realm 
+
 https://www.geeksforgeeks.org/how-to-print-to-stderr-and-stdout-in-python/ - import sys 
+
+### Tutor/mentor suggestions
 
 ### Inspiration and content 
 https://www.iucnredlist.org/species/11534/3292503
 https://oliveridleyproject.org/threats-to-sea-turtles
-
-
 
 ## Reminders
 

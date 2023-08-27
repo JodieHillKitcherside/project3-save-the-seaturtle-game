@@ -30,6 +30,10 @@ keys = [
     "right"
 ]
 
+# Customise exception class for wrong key pressed
+class wrongKey(KeyError):
+    pass
+
 
 def exit()
 
