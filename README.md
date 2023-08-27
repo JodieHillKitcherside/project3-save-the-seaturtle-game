@@ -1,8 +1,54 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Save the Sea Turtle Game
 
-Welcome,
+The Save the Sea Turtle Game has been created as a mini adventure game, perfect to play as you would have on a gameboy in the early 90s! This mini adventure game follows the real life challenges faced to Sea Turtles, of which all species are either vulnerable or critcially endagered, significantly due to human threats. 
+As tragic and morbid as this sounds, the game aims to make a light-hearted fun, and to educate anyone who plays it in a mini adventure episode. 
+The quiz' main target market group would be perfect for pre-teen or teenagers, who typically would play adventure games and perfect as it is educational. Of course, this is welcome to all adults to try too!
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+The game is story based, with four main options to choose the 'sea turtle's next move. This them passes on to various actions. The game is formatted in Python Script, styled as room exploration game. Each option offers the user to use several keys to change direction, giving contol to the user to explore different sequences of the sea turtle's life.
+
+# User Feedback
+
+- ""
+
+# Features
+
+### Storyboard:
+
+This is a basic format used to structure the story for the game.  
+![Storyboard Flowchart](documents/save_the_seaturtle_game_storyboard.jpg)
+
+### Flowchart planning 
+This is a basic structure plan for the code, mapping out the necessary functions to work from.  
+![Functions Flowchart](documents/save_the_seaturtle_game _functions.jpg)
+
+## Existing Features
+
+## Code errors 
+## Code decorators?
+## If else functions
+
+## Features left to implement
+
+## Design
+
+### Validator Testing
+
+## Examples:
+
+### PEP8
+
+### Solved Bugs
+
+### Unsolved Bugs
+
+## Deployment
+
+## Credits
+
+### Inspired websites and tutor/mentor suggestions
+
+### Inspiration and content 
+
 
 ## Reminders
 
