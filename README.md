@@ -1,10 +1,11 @@
 # Save the Sea Turtle Game
 
-The Save the Sea Turtle Game has been created as a mini adventure game, perfect to play as you would have on a gameboy in the early 90s! This mini adventure game follows the real life challenges faced to Sea Turtles, of which all species are either vulnerable or critcially endagered, significantly due to human threats. 
+The Save the Sea Turtle Game has been created as a mini adventure game, perfect to play as you would have on a gameboy in the 80s! This mini adventure game follows the real life challenges faced to Sea Turtles, of which all species are either vulnerable or critcially endagered, significantly due to human threats. 
 As tragic and morbid as this sounds, the game aims to make a light-hearted fun, and to educate anyone who plays it in a mini adventure episode. 
 The quiz' main target market group would be perfect for pre-teen or teenagers, who typically would play adventure games and perfect as it is educational. Of course, this is welcome to all adults to try too!
 
-The game is story based, with four main options to choose the 'sea turtle's next move. This them passes on to various actions. The game is formatted in Python Script, styled as room exploration game. Each option offers the user to use several keys to change direction, giving contol to the user to explore different sequences of the sea turtle's life.
+The game is story based, with four main options to choose the 'sea turtle's next move. This them passes on to various actions. 
+This formatted in Python Script, styled as a text-based room exploration game. Each option offers the user to use several keys to change direction, giving contol to the user to explore different sequences of the sea turtle's life.
 
 # User Feedback
 
@@ -29,6 +30,10 @@ This is a basic structure plan for the code, mapping out the necessary functions
 
 ## Features left to implement
 
+The text-based game could be further developed with images and a more detailed storyline, as with an RPG, like many other nintendo games (Super Mario, Animal Crossing, Legend of Zelda) ideal for the nintendo switch. 
+In order to enable this, the storyline would need to be simplified, add mutliple characters and update the functionality. Main character would be identified rather than asking a user to assign a name, and the story would start by introducing this character, for example : "Ahoy Crush! I like the way you're riding the waves! Dude, it's time for an adventure! Your aim is to keep safe and avoid being eaten by the Great White Shark and any other hidden terrors - so watch out! Which way would you like to go next?" 
+Allowing the game to become a RPG would simplify the storyline and make this more unniversal for younger children. 
+
 ## Design
 
 ### Validator Testing
@@ -48,6 +53,9 @@ This is a basic structure plan for the code, mapping out the necessary functions
 ### Inspired websites and tutor/mentor suggestions
 
 ### Inspiration and content 
+https://www.iucnredlist.org/species/11534/3292503
+https://oliveridleyproject.org/threats-to-sea-turtles
+
 
 
 ## Reminders
