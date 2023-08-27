@@ -27,17 +27,16 @@ keys = [
     "down",
     "up",
     "left",
-    "right",
+    "right"
 ]
 
 
 def exit()
 
-
-def introScene()
+if __name__ == "__main__":
 # Print introductory text,
 # Ask user to input name 
-# Select key for next option
+# Start introScene function
     print("Welcome to the Save the Sea Turtle Game!")
     print("Ahoy! As an endagered seaturtle, you are peacefully riding the Pacific Ocean. We are going to take you on a mini adventure, watch out for the Great White shark, and be aware of other terrors.")
     print("First, let's start with your name!")
@@ -45,6 +44,27 @@ def introScene()
     print(name + ", great. Now you have 4 directions to choose from.")
     print("Which way will you go next?")
     print("Options(Key) - Up, down, Left, Right")
+
+def introScene()
+# Add options for directions the user/ player can choose from
+# Ask user to select key
+    directions = ["down", "up", "left", "right"]
+    print(name + ", great. Now you have 4 directions to choose from.")
+    print("Which way will you go next?")
+    userInput = ""
+    while userInput not in directions:
+            print("Options(Key) - Up/ Down/ Left/ Right")
+            userInput = input()
+            if userInput = "Up":
+                gillnetRescue()
+            elif userInput = "Down":
+                tangedExit()
+            elif userInput = "Left":
+                oaxacaBeach()
+            elif userInput = "Right":
+                swimWithFriends()
+            else:
+                print("Please enter valid key option for the Save the Sea Turtle Game.")
 
 
 def oaxacaBeach()
