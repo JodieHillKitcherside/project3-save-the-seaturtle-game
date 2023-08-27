@@ -1,5 +1,53 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+import sys
+import time
+
+def main()
 
 
+
+def textPrint(text)
+# formatting the text type effect on users screen
+    for character in text:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.05)
+    print('')
+
+
+
+def keys()
+
+
+
+def exit()
+
+
+def introScene()
+
+
+def oaxacaBeach()
+    def vultureLurk()
+        def babiesSafe()
+            exit()
+        def fleeExit()
+            exit()
+
+
+def gillnetRescue()
+    def rescueExit()
+        exit()
+
+
+def tangedExit()
+    exit()
+
+
+def swimWithFriends()
+    def greatWhite()
+        def sharkBait()
+            exit()
+        def freedomExit()
+            exit()
+
+
+main() 

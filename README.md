@@ -2,7 +2,7 @@
 
 The Save the Sea Turtle Game has been created as a mini adventure game, perfect to play as you would have on a gameboy in the 80s! This mini adventure game follows the real life challenges faced to Sea Turtles, of which all species are either vulnerable or critcially endagered, significantly due to human threats. 
 As tragic and morbid as this sounds, the game aims to make a light-hearted fun, and to educate anyone who plays it in a mini adventure episode. 
-The quiz' main target market group would be perfect for pre-teen or teenagers, who typically would play adventure games and perfect as it is educational. Of course, this is welcome to all adults to try too!
+The quiz' main target market group would be ideal for pre-teen or teenagers, who typically would play adventure games and perfect as it is educational. Of course, this is welcome to all adults to try too!
 
 The game is story based, with four main options to choose the 'sea turtle's next move. This them passes on to various actions. 
 This formatted in Python Script, styled as a text-based room exploration game. Each option offers the user to use several keys to change direction, giving contol to the user to explore different sequences of the sea turtle's life.
@@ -55,6 +55,7 @@ Allowing the game to become a RPG would simplify the storyline and make this mor
 ## Credits
 
 ### Inspired websites and tutor/mentor suggestions
+https://www.geeksforgeeks.org/how-to-print-to-stderr-and-stdout-in-python/ - import sys 
 
 ### Inspiration and content 
 https://www.iucnredlist.org/species/11534/3292503
