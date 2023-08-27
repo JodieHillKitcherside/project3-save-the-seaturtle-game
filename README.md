@@ -19,7 +19,7 @@ This is a basic format used to structure the story for the game.
 
 ### Flowchart planning 
 This is a basic structure plan for the code, mapping out the necessary functions to work from.  
-![Functions Flowchart](documents/save_the_seaturtle_game_functions.jpg)
+![Functions Flowchart](documents/save_the_seaturtle_game _functions.jpg)
 
 ## Existing Features
 
