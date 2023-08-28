@@ -1,6 +1,11 @@
 import sys
 import time
 import keyboard
+import pyfiglet
+
+# USe pyfiglet module 
+result = pyfiglet.figlet_format("Save the Sea Turtle", font="digital")
+print(result)
 
 
 def main():
@@ -31,7 +36,8 @@ def vultureLurk():
     elif userInput == keyboard.KP_RIGHT:
         babiesSafe()
     else:
-        print("Please enter a valid option.")
+        raise KeyError
+        print("Please enter a valid key option.")
         vultureLurk()
 
 
@@ -85,7 +91,8 @@ def greatWhite():
     elif userInput == "KP_LEFT":
         freedomExit()
     else:
-        print("Please enter a valid option.")
+        raise KeyError
+        print("Please enter a valid key option.")
         greatWhite()
 
 
