@@ -16,11 +16,11 @@ This formatted in Python Script, styled as a text-based room exploration game. E
 ### Storyboard:
 
 This is a basic format used to structure the story for the game.  
-![Storyboard Flowchart](documents/save_the_seaturtle_game_storyboard.jpg)
+![Storyboard Flowchart](assets/images/save_the_seaturtle_game_storyboard.jpg)
 
 ### Flowchart planning 
 This is a basic structure plan for the code, mapping out the necessary functions to work from.  
-![Functions Flowchart](documents/save_the_seaturtle_game%20_functions.jpg) 
+![Functions Flowchart](assets/images/save_the_seaturtle_game%20_functions.jpg) 
 
 ## Existing Features
 

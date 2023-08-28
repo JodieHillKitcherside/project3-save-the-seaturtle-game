@@ -26,9 +26,9 @@ def vultureLurk():
     print("Watch out! Vultures are out to attack!")
     print(name + ", select your next option: Up or Right!")
     userInput = input().lower()
-    if userInput == KP_UP:
+    if userInput == keyboard.KP_UP:
         fleeExit()
-    elif userInput == KP_RIGHT:
+    elif userInput == keyboard.KP_RIGHT:
         babiesSafe()
     else:
         print("Please enter a valid option.")
@@ -80,9 +80,9 @@ def greatWhite():
     print("Can you hide from the great white shark? He's spotted you!")
     print(name + ", select your next option: Up or Left!")
     userInput = input().lower()
-    if userInput == KP_UP:
+    if userInput == "KP_UP":
         sharkBaitExit()
-    elif userInput == KP_LEFT:
+    elif userInput == "KP_LEFT":
         freedomExit()
     else:
         print("Please enter a valid option.")
@@ -103,25 +103,28 @@ def freedomExit():
 def introScene():
     global name
     name = input("Please enter your name: ")
-    directions = ["down", "up", "left", "right"]
     print(name + ", great. Now you have 4 directions to choose from.")
     print("Which way will you go next?")
     userInput = input().lower()
+    directions = ["KP_UP", "KP_DOWN", "KP_Right", "KP_LEFT"]
     while userInput not in directions:
         print(name + ", your options are: Up, Down, Left, Right")
         userInput = input().lower()
 
-    if userInput == KP_UP:
+    if userInput == "KP_UP":
         gillnetRescue()
-    elif userInput == KP_DOWN:
+    elif userInput == "KP_DOWN":
         tangledExit()
-    elif userInput == KP_LEFT:
+    elif userInput == "KP_LEFT":
         oaxacaBeach()
-    elif userInput == KP_RIGHT:
+    elif userInput == "KP_RIGHT":
         swimWithFriends()
 
 
 if __name__ == "__main__":
     print("Welcome to the Save the Sea Turtle Game!")
     # ... [introductory text]
+    print("Ahoy! As an endangered sea turtle, you are peacefully riding")
+    print("the Pacific Ocean. We are going to take you on an adventure!")
+    print("Watch out for the Great White Shark and other great terrors.")
     main()
