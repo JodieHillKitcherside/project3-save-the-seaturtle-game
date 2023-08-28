@@ -50,7 +50,8 @@ Allowing the game to become a RPG would simplify the storyline and make this mor
 
 ### Solved Bugs
 
-Terminal identified a number of indentation errors - quickly resolved with human eye. 
+- Terminal identified a number of indentation errors - quickly resolved with human eye. 
+- Exit function would not work as parentheses included each individual function to call, fixed by calling main function, with all other functions inside. Thus, avoided repetition in code. 
 
 ### Unsolved Bugs
 

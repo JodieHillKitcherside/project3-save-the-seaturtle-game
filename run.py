@@ -1,34 +1,49 @@
 import sys
 import time
-import keyboard 
+import pygame
 
 
 def main():
     # Run all program functions 
-    textPrint(text)
+    # textPrint(text)
     introScene()
     oaxacaBeach()
     gillnetRescue()
     tangledExit()
     swimWithFriends()
+    exit()
 
 
-def textPrint(text):
+""" def text_print(text):
     # Format the text type effect on users screen
     for character in text:
         sys.stdout.write(character)
         sys.stdout.flush()
         time.sleep(0.05)
-    print('')
+    print('')"""
 
 
 # Constant with a list of options for user/ player 
-keys = [
-    "down",
-    "up",
-    "left",
-    "right"
-]
+# Import pygame.locals for access to key coordinates 
+from pygame.locals import (
+    K_UP,
+    K_DOWN,
+    K_LEFT,
+    K_RIGHT, 
+    K_ESCAPE,
+    QUIT,
+)
+
+pygame.init()
+
+running = True
+
+while running:
+    for event in pygame.event.get():
+        if event.type == K_ESCAPE:
+            running = False
+        elif event.type == QUIT:
+            running = False 
 
 
 # Customise exception class for wrong key pressed
@@ -40,6 +55,10 @@ if __name__ == "__main__":
     # Print introductory text,
     # Ask user to input name 
     # Start introScene function
+    # Text instructions 
+
+    # text = "Save the Sea Turtle Game"
+
     print("Welcome to the Save the Sea Turtle Game!")
     print("Ahoy! As an endagered seaturtle, you are peacefully riding") 
     print("the Pacific Ocean. We are going to take you on a mini adventure,") 
@@ -52,31 +71,7 @@ if __name__ == "__main__":
     print("Options(Key) - Up, down, Left, Right")
 
 
-def introScene():
-    # Add options for directions the user/ player can choose from
-    # Ask user to select key
-    directions = ["down", "up", "left", "right"]
-    print(name + ", great. Now you have 4 directions to choose from.")
-    print("Which way will you go next?")
-    userInput = ""
-    while userInput not in directions:
-            print("Options(Key) - Up/ Down/ Left/ Right")
-            userInput = input()
-            if userInput == "Up":
-                gillnetRescue()
-            elif userInput == "Down":
-                tangledExit()
-            elif userInput == "Left":
-                oaxacaBeach()
-            elif userInput == "Right":
-                swimWithFriends()
-            else:
-                print("Please enter valid key option for the")
-                print("Save the Sea Turtle Game.")
-
-
-def exit(introScene, main, tangledExit, fleeExit, babiesSafe, 
-    rescueExit, freedomExit, sharkBaitExit):
+def exit(main):
     print("Well done on getting that far. I'm sure you've worked out by now") 
     print("that unfortunately sea turtles face many threats to their survival")
     print("and although some are natural - most are human threats.")
@@ -96,9 +91,9 @@ def oaxacaBeach():
         print("Watch out! Vultures are out to attact!")
         print(name + "Select your next option: Up or Right!")
         userInput = input()
-        if userInput == "Up":
+        if userInput == "K_UP":
             fleeExit()
-        elif userInput == "Right":
+        elif userInput == "K_RIGHT":
             babiesSafe()
         else:
             print("Please enter valid key option for the")
@@ -123,13 +118,15 @@ def gillnetRescue():
     # Present option for up "being caputred by gillnets"
     # Set function for rescueExit 
     # Call function for rescueExit 
-    print("Oh! Unfortunatley you have been accidentally captured by gillnets!")
-    print("Fishermen are so sorry and have called ocean rescue!")
-    
+
     def rescueExit(exit):
         print("Yay! The rescue team are taking you to rehab, looks like your")
-        print("injuries will be fixed and you are going back to the open ocean!")
+        print("injuries will be fixed and you are going back")
+        print("to the open ocean!")
         exit()
+
+    print("Oh! Unfortunatley you have been accidentally captured by gillnets!")
+    print("Fishermen are so sorry and have called ocean rescue!")
     
     rescueExit()   
 
@@ -148,6 +145,15 @@ def swimWithFriends():
     # Present option for left "still peacefully swimming"
     
     def greatWhite():
+        def sharkBaitExit(exit):
+            print("He got you! You tried to get away but he's too fast.") 
+            print("You're dead.")
+            exit()
+
+        def freedomExit(exit):
+            print("You swam up and out of sight! You are free.")
+            exit()
+
         print("Can you hide from the great white shark? He's spotted you!")
         print(name + "Select your next option: Up or Left!")
         userInput = input()
@@ -158,15 +164,31 @@ def swimWithFriends():
         else:
             print("Please enter valid key option for the")
             print("Save the Sea Turtle Game.")
-        def sharkBait(exit):
-            print("He got you! You tried to get away but he's too fast.") 
-            print("You're dead.")
-            exit()
-        def freedomExit(exit):
-            print("You swam up and out of sight! You are free.")
-            exit()
-    
+
     greatWhite()
+
+
+def introScene():
+    # Add options for directions the user/ player can choose from
+    # Ask user to select key
+    directions = ["down", "up", "left", "right"]
+    print(name + ", great. Now you have 4 directions to choose from.")
+    print("Which way will you go next?")
+    userInput = ""
+    while userInput not in directions:
+        print(name + "your options: (key in) - Up/ Down/ Left/ Right")
+        userInput = input()
+        if userInput == "K-UP":
+            gillnetRescue()
+        elif userInput == "K_DOWN":
+            tangledExit()
+        elif userInput == "K_LEFT":
+            oaxacaBeach()
+        elif userInput == "K_RIGHT":
+            swimWithFriends()
+        else:
+            print("Please enter valid key option for the")
+            print("Save the Sea Turtle Game.")
 
 
 main() 
