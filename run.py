@@ -24,7 +24,14 @@ def exit():
 def oaxacaBeach():
     print("Wow mama! You have many eggs to lay, you've ended up swimming")
     print("to Oaxaca Beach! Lets see if you can protect them all!")
-    vultureLurk()
+    userInput = input().lower()
+    if userInput == keyboard.KP_RIGHT:
+        vultureLurk()
+    elif userInput == keyboard.KP_DOWN:
+        disoriented()
+    else:
+        raise KeyError
+        print("Please enter a valid key option.")
 
 
 def vultureLurk():
@@ -55,6 +62,18 @@ def fleeExit():
     exit()
 
 
+def disoriented():
+    print("You seem a bit disorientated! Humans like to surf here and")
+    print("this means the beach has changed so much since you were")  
+    print("first here, 20 years ago. Will you find a quiet place") 
+    print("to protect your eggs?")
+    beachPartyExit()
+
+def beachPartyExit():
+    print("Blast! The people are startling you.")
+    print("There is a beach party. There's nowhere to lay!")
+
+
 def gillnetRescue():
     print("Oh! Unfortunately, you have been accidentally captured!")
     print("You are stuck in gillnets and struggling to get out")
@@ -79,7 +98,19 @@ def tangledExit():
 
 
 def swimWithFriends():
-    greatWhite()
+    print("Looks like you've found some friends! you are swimming around")
+    print("kelp, little fishes and terrible claw lobsters.") 
+    print("Woah!There is lots of food here!")
+    print("Which way will you go?")
+    print("Enter your option: Up or Left")
+    userInput = input().lower()
+    if userInput == "KP_UP":
+        greatWhite()
+    elif userInput == "KP_LEFT":
+        oilSpill()
+    else:
+        raise KeyError
+        print("Please enter a valid key option.")
 
 
 def greatWhite():
@@ -89,7 +120,7 @@ def greatWhite():
     if userInput == "KP_UP":
         sharkBaitExit()
     elif userInput == "KP_LEFT":
-        freedomExit()
+        balloonExit()
     else:
         raise KeyError
         print("Please enter a valid key option.")
@@ -102,10 +133,26 @@ def sharkBaitExit():
     exit()
 
 
-def freedomExit():
-    print("You swam up and out of sight! You are free.")
+def balloonExit():
+    print("You swam up and out of sight!")
+    print("But oops! You accidentally swallowed a balloon")
+    print("You thought it was a jellyfish! Unlucky...")
+    print("Let's hope that get's recycled out of your body")
+    print("or it will be fatal..")
     exit()
 
+def oilSpill():
+    print("There's been an oil spill affecting your favourite")
+    print("corals! You are going to have to rest by the") 
+    print("mangroves instead. Take a five minute rest and get")
+    print("back to swimming.")
+    vesselStrikeExit()
+
+def vesselStrikeExit():
+    print("Poor you! A boat came to watch sealions near by your")
+    print("new favourite spot! the boat It's colided with a pod")
+    print("of seals. You haven't been able to reach the surface this time!")
+    exit()
 
 def introScene():
     global name
