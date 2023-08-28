@@ -30,6 +30,8 @@ class emoji:
     self.seal = " \U+1F9AD \n"
     self.squid = " \U+1F991 \n"
     self.crab = " \U+1F980 \n"
+    self.egg = " \U+1F95A \n"
+    self.vulture = " \U+1F985 \n"
     # Ocean Transport 
     self.buoy = " \U+1F6DF \n"
     self.motorboat = " \U+1F6E5 \n"
@@ -108,6 +110,12 @@ def seal(self):
 
 def squid(self):
     return f"{self.squid}"
+
+def egg(self):
+    return f"{self.egg}"
+
+def vulture(self):
+    return f"{self.vulture}"
 
 def crab(self):
     return f"{self.crab}"
