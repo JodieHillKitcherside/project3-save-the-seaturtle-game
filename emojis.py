@@ -3,7 +3,7 @@ Contains a class for all emojis used in the game
 """
 
 
-class emoji:
+class emoji():
     def__init__(self):
         """
         Creates instance of emoji
@@ -47,7 +47,7 @@ class emoji:
         self.biohazard = " \U+2623 \n"
         # Mexico flag
         self.mexico = " \U+1F1F2 U+1F1FD \n"
-        # Water 
+        # Water
         self.wave = " \U+1F30A \n"
         # Death
         self.pirateflag = " \U+1F3F4 U+200D U+2620 U+FE0F \n"
@@ -57,11 +57,15 @@ class emoji:
 """
 Defines all functions for each emoji
 """
+
+
 def lightblueheart(self):
     return f"{self.lightblueheart}"
 
+
 def whiteheart(self):
     return f"{self.whiteheart}"
+
 
 def handwave(self):
     return f"{self.handwave}"
@@ -69,26 +73,33 @@ def handwave(self):
 def okay(self):
     return f"{self.okay}"
 
+
 def clapping(self):
     return f"{self.clapping}"
+
 
 def seaturtle(self):
     return f"{self.seaturtle}"
 
+
 def wave(self):
     return f"{self.wave}"
 
+
 def dolphin(self):
-    return f"{self.dolphin}"
+  return f"{self.dolphin}"
+
 
 def tropicalfish(self):
     return f"{self.tropicalfish}"
+
 
 def blowfish(self):
     return f"{self.blowfish}"
 
 def shark(self):
     return f"{self.shark}"
+
 
 def octopus(self):
     return f"{self.octopus}"
@@ -99,11 +110,13 @@ def shell(self):
 def reef(self):
     return f"{self.reef}"
 
+
 def jellyfish(self):
     return f"{self.jellyfish}"
 
 def lobster(self):
     return f"{self.lobster}"
+
 
 def seal(self):
     return f"{self.seal}"
@@ -114,14 +127,17 @@ def squid(self):
 def egg(self):
     return f"{self.egg}"
 
+
 def vulture(self):
     return f"{self.vulture}"
 
 def crab(self):
     return f"{self.crab}"
 
+
 def buoy(self):
     return f"{self.buoy}"
+
 
 def motorboat(self):
     return f"{self.motorboat}"
@@ -129,14 +145,17 @@ def motorboat(self):
 def compass(self):
     return f"{self.compass}"
 
+
 def divingmask(self):
     return f"{self.divingmask}"
 
 def e_up(self):
-    return f"{self.e_up}"
+   return f"{self.e_up}"
+
 
 def e_down(self):
     return f"{self.e_down}"
+
 
 def e_right(self):
     return f"{self.e_right}"
@@ -144,15 +163,18 @@ def e_right(self):
 def e_left(self):
     return f"{self.e_left}"
 
+
 def biohazard(self):
     return f"{self.biohazard}"
+
 
 def mexico(self):
     return f"{self.mexico}"
 
+
 def pirateflag(self):
     return f"{self.pirateflag}"
 
+
 def skull(self):
     return f"{self.skull}"
-
