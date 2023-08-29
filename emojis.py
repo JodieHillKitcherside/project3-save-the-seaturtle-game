@@ -8,14 +8,11 @@ class emoji():
         """
         Creates instance of emoji
         """
-        # Hearts
         self.lightblueheart = " \U+1FA75 \n"
         self.whiteheart = " \U+1F90D \n"
-        # Gestures 
         self.handwave = " \U+1F44B \n"
         self.okay = " \U+1F44C \n"
         self.clapping = " \U+1F44F \n"
-        # Marine life 
         self.seaturtle = " \U+1F422	\n"
         self.whale = " \U+1F433 \n"
         self.dolphin = " \U+1F42C \n"
@@ -32,24 +29,17 @@ class emoji():
         self.crab = " \U+1F980 \n"
         self.egg = " \U+1F95A \n"
         self.vulture = " \U+1F985 \n"
-        # Ocean Transport 
         self.buoy = " \U+1F6DF \n"
         self.motorboat = " \U+1F6E5 \n"
-        # Sea Objects
         self.divingmask = " \U+1F93F \n"
         self.compass = " \U+1F9ED \n"
-        # Keys
         self.e_up = " \U+2B06 \n"
         self.e_down = " \U+2B07 \n"
         self.e_right = " \U+27A1 \n"
         self.e_left = " \U+2B05 \n"
-        # Warnings
         self.biohazard = " \U+2623 \n"
-        # Mexico flag
         self.mexico = " \U+1F1F2 U+1F1FD \n"
-        # Water
         self.wave = " \U+1F30A \n"
-        # Death
         self.pirateflag = " \U+1F3F4 U+200D U+2620 U+FE0F \n"
         self.skull = " \U+2620 \n"
 
@@ -70,6 +60,7 @@ def whiteheart(self):
 def handwave(self):
     return f"{self.handwave}"
 
+
 def okay(self):
     return f"{self.okay}"
 
@@ -87,7 +78,7 @@ def wave(self):
 
 
 def dolphin(self):
-  return f"{self.dolphin}"
+    return f"{self.dolphin}"
 
 
 def tropicalfish(self):
@@ -97,6 +88,7 @@ def tropicalfish(self):
 def blowfish(self):
     return f"{self.blowfish}"
 
+
 def shark(self):
     return f"{self.shark}"
 
@@ -104,8 +96,10 @@ def shark(self):
 def octopus(self):
     return f"{self.octopus}"
 
+
 def shell(self):
     return f"{self.shell}"
+
 
 def reef(self):
     return f"{self.reef}"
@@ -114,6 +108,7 @@ def reef(self):
 def jellyfish(self):
     return f"{self.jellyfish}"
 
+
 def lobster(self):
     return f"{self.lobster}"
 
@@ -121,8 +116,10 @@ def lobster(self):
 def seal(self):
     return f"{self.seal}"
 
+
 def squid(self):
     return f"{self.squid}"
+
 
 def egg(self):
     return f"{self.egg}"
@@ -130,6 +127,7 @@ def egg(self):
 
 def vulture(self):
     return f"{self.vulture}"
+
 
 def crab(self):
     return f"{self.crab}"
@@ -142,6 +140,7 @@ def buoy(self):
 def motorboat(self):
     return f"{self.motorboat}"
 
+
 def compass(self):
     return f"{self.compass}"
 
@@ -149,8 +148,9 @@ def compass(self):
 def divingmask(self):
     return f"{self.divingmask}"
 
+
 def e_up(self):
-   return f"{self.e_up}"
+    return f"{self.e_up}"
 
 
 def e_down(self):
@@ -159,6 +159,7 @@ def e_down(self):
 
 def e_right(self):
     return f"{self.e_right}"
+
 
 def e_left(self):
     return f"{self.e_left}"

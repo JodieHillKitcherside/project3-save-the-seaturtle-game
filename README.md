@@ -69,6 +69,7 @@ Invent Your Own Computer Games With Python - Al Sweigart
 - 5 : Dragon Realm 
 
 https://www.geeksforgeeks.org/how-to-print-to-stderr-and-stdout-in-python/ - import sys 
+https://pynput.readthedocs.io/en/latest/keyboard.html#pynput.keyboard.Key.up - user input keys
 
 ### Tutor/mentor suggestions
 

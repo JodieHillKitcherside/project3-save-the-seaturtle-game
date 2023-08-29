@@ -1,6 +1,12 @@
 import sys
 import time
 
+
+"""
+Source of general functions and styling 
+"""
+
+
 def slowprint(all_strings):
     """
     Runs all string in python terminal

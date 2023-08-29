@@ -1,24 +1,27 @@
-"""
-Runs the game
-"""
-
-
-# Import modules 
 import sys
 import time
-import keyboard
+ifrom pynput import keyboard
 import pyfiglet
 from emojis import emoji
 from general import slowprint
 
 
-# Use pyfiglet module 
+"""
+Use pyfiglet module 
+"""
 result = pyfiglet.figlet_format("Save the Sea Turtle", font="digital")
 print(result)
 
 
-# Declare emojis variable
+"""
+Declare emojis variable
+"""
 emoji_choice = emoji()
+
+"""
+Define pressed key location
+"""
+pressed_keys = pygame.key.get_pressed()
 
 
 def main():
@@ -29,12 +32,12 @@ def main():
 def exit():
     # Exit function exits the game
     slowprint(
-        "GAME OVER" + name + emoji_choice.skull()
-        "Well done on getting that far. I'm sure you've worked out by now \n" +
-        "that unfortunately sea turtles face many threats to their survival \n" +
-        "and although some are natural - most are human threats. \n" +
+        "GAME OVER" + name + emoji_choice.skull() +
+        "Well done on getting that far. I'm sure you've worked out by now" +
+        "that unfortunately sea turtles face many threats to their survival" +
+        "and although some are natural - most are human threats." +
         emoji_choice.pirateflag() +
-        "If you survived, you're made of strong stuff. It's estimated that \n" +
+        "If you survived, you're made of strong stuff. It's estimated that" +
         "only 1 in 1000 sea turtles make it to adult turtle." + 
         emoji_choice.seaturtle())
     sys.exit()
@@ -45,19 +48,19 @@ def oaxacaBeach():
     # Based on right, proceed to vultureLurk 
     # Based on down, proceed to disoriented
     slowprint(
-        "Wow mama! You have many eggs to lay, you've \n"
-        "ended up swimming" 
+        "Wow mama! You have many eggs to lay, you've" +
+        "ended up swimming"
         + emoji_choice.egg()
-        + "to Oaxaca Beach! Lets see if you can protect \n"
+        + "to Oaxaca Beach! Lets see if you can protect"
         "them all!" + emoji_choice.mexico())
-        userInput = input().lower()
-        if userInput == keyboard.KP_RIGHT:
-            vultureLurk()
-        elif userInput == keyboard.KP_DOWN:
-            disoriented()
-        else:
-            raise KeyError
-            print("Please enter a valid key option.")
+    userInput = input().lower()
+    if userInput == keyboard.Key.left:
+        vultureLurk()
+    elif userInput == keyboard.Key.down:
+        disoriented()
+    else:
+        raise KeyError
+        print("Please enter a valid key option.")
 
 
 def vultureLurk():
@@ -68,15 +71,15 @@ def vultureLurk():
         "Watch out! Vultures are out to attack!" +
         emoji_choice.vulture()
         + name + ", select your next option: Up or Right!")
-        userInput = input().lower()
-        if userInput == keyboard.KP_UP:
-            fleeExit()
-        elif userInput == keyboard.KP_RIGHT:
-            babiesSafe()
-        else:
-            raise KeyError
-            print("Please enter a valid key option.")
-        vultureLurk()
+    userInput = input().lower()
+    if userInput == keyboard.Key.up:
+        fleeExit()
+    elif userInput == keyboard.Key.right:
+        babiesSafe()
+    else:
+        raise KeyError
+        print("Please enter a valid key option.")
+    vultureLurk()
 
 
 def babiesSafe():
@@ -86,7 +89,7 @@ def babiesSafe():
         emoji_choice.whiteheart() 
         + "You tried so hard in the heat and wading through the thick sand."
         + emoji_choice.clapping()
-        +"Amazing, you have 100 baby turtle eggs protected!" +
+        + "Amazing, you have 100 baby turtle eggs protected!" +
         emoji_choice.blowfish())
     exit()
 
@@ -95,8 +98,8 @@ def fleeExit():
     # Exit game 
     slowprint(
         "Vultures viciously circled and you fled back to the ocean!"
-        + emoji_choice.wave 
-        + "You're so lucky! You made it back to ride the tide!"
+        + emoji_choice.wave +
+        "You're so lucky! You made it back to ride the tide!"
         + emoji_choice.lightblueheart
         + "You can try again tomorrow.")
     exit()
@@ -127,7 +130,7 @@ def gillnetRescue():
         "Oh! Unfortunately, you have been accidentally captured!"
         + emoji_choice.motorboat()
         + "You are stuck in gillnets and struggling to get out"
-        + emoji_choice_buoy()
+        + emoji_choice.buoy()
         + "means you have deep cuts on your flippers..."
         + "Fishermen are so sorry and have called ocean rescue!")
     rescueExit()
@@ -167,9 +170,9 @@ def swimWithFriends():
         + "Which way will you go?"
         "Enter your option: Up or Left")
     userInput = input().lower()
-    if userInput == "KP_UP":
+    if userInput == keyboard.Key.up:
         greatWhite()
-    elif userInput == "KP_LEFT":
+    elif userInput == keyboard.Key.left:
         oilSpill()
     else:
         raise KeyError
@@ -183,12 +186,12 @@ def greatWhite():
     slowprint(
         "Can you hide from the great white shark? He's spotted you!"
         + emoji_choice.shark()
-        + name + 
-        ", select your next option: Up or Left!")
+        + name 
+        + ", select your next option: Up or Left!")
     userInput = input().lower()
-    if userInput == "KP_UP":
+    if userInput == keyboard.Key.up:
         sharkBaitExit()
-    elif userInput == "KP_LEFT":
+    elif userInput == keyboard.Key.left:
         balloonExit()
     else:
         raise KeyError
@@ -215,6 +218,7 @@ def balloonExit():
         + "or it will be fatal..")
     exit()
 
+
 def oilSpill():
     # Continue to vesselStrikeExit
     slowprint(
@@ -226,6 +230,7 @@ def oilSpill():
         + "back to swimming.")
     vesselStrikeExit()
 
+
 def vesselStrikeExit():
     # Exit game 
     slowprint(
@@ -234,6 +239,7 @@ def vesselStrikeExit():
         + "of seals. You haven't been able to reach the surface this time!"
         + emoji_choice.seal())
     exit()
+
 
 def introScene():
     # Make name recognised as global 
@@ -245,18 +251,17 @@ def introScene():
     userInput = input().lower()
 
     # Based on option user selects, proceed to correct destination function
-    directions = ["KP_UP", "KP_DOWN", "KP_Right", "KP_LEFT"]
     while userInput not in directions:
         slowprint(
             name + ", your options are: Up, Down, Left, Right")
         userInput = input().lower()
-        if userInput == "KP_UP":
+        if userInput == keyboard.Key.up:
             gillnetRescue()
-        elif userInput == "KP_DOWN":
+        elif userInput == keyboard.Key.down:
             tangledExit()
-        elif userInput == "KP_LEFT":
+        elif userInput == keyboard.Key.left:
             oaxacaBeach()
-        elif userInput == "KP_RIGHT":
+        elif userInput == keyboard.Key.right:
             swimWithFriends()
 
 
