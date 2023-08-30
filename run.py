@@ -1,13 +1,17 @@
 import sys
 import time
-ifrom pynput import keyboard
+from pynput import keyboard
 import pyfiglet
 from emojis import emoji
-from general import slowprint
+from general import (
+    slowprint,
+    escape,
+    check_user_input
+)
 
 
 """
-Use pyfiglet module 
+Use pyfiglet module
 """
 result = pyfiglet.figlet_format("Save the Sea Turtle", font="digital")
 print(result)
@@ -16,12 +20,7 @@ print(result)
 """
 Declare emojis variable
 """
-emoji_choice = emoji()
-
-"""
-Define pressed key location
-"""
-pressed_keys = pygame.key.get_pressed()
+emoji_choice = emoji
 
 
 def main():
@@ -38,14 +37,14 @@ def exit():
         "and although some are natural - most are human threats." +
         emoji_choice.pirateflag() +
         "If you survived, you're made of strong stuff. It's estimated that" +
-        "only 1 in 1000 sea turtles make it to adult turtle." + 
-        emoji_choice.seaturtle())
+        "only 1 in 1000 sea turtles make it to adult turtle."
+        + emoji_choice.seaturtle())
     sys.exit()
 
 
 def oaxacaBeach():
-    # Offer user right or down keys to continue game 
-    # Based on right, proceed to vultureLurk 
+    # Offer user right or down keys to continue game
+    # Based on right, proceed to vultureLurk
     # Based on down, proceed to disoriented
     slowprint(
         "Wow mama! You have many eggs to lay, you've" +
@@ -59,8 +58,7 @@ def oaxacaBeach():
     elif userInput == keyboard.Key.down:
         disoriented()
     else:
-        raise KeyError
-        print("Please enter a valid key option.")
+        print(KeyError + "Please enter a valid key option (LEFT or DOWN).")
 
 
 def vultureLurk():
@@ -77,8 +75,7 @@ def vultureLurk():
     elif userInput == keyboard.Key.right:
         babiesSafe()
     else:
-        raise KeyError
-        print("Please enter a valid key option.")
+        print(KeyError + "Please enter a valid key option (UP or RIGHT).")
     vultureLurk()
 
 
@@ -86,7 +83,7 @@ def babiesSafe():
     # Exit game
     slowprint(
         "Phew! You dug a deep nest and all the babies are safe!" +
-        emoji_choice.whiteheart() 
+        emoji_choice.whiteheart()
         + "You tried so hard in the heat and wading through the thick sand."
         + emoji_choice.clapping()
         + "Amazing, you have 100 baby turtle eggs protected!" +
@@ -95,7 +92,7 @@ def babiesSafe():
 
 
 def fleeExit():
-    # Exit game 
+    # Exit game
     slowprint(
         "Vultures viciously circled and you fled back to the ocean!"
         + emoji_choice.wave +
@@ -118,7 +115,7 @@ def disoriented():
 
 
 def beachPartyExit():
-    # Exit game 
+    # Exit game
     slowprint(
         "Blast! The people are startling you."
         + "There is a beach party. There's nowhere to lay!")
@@ -137,19 +134,19 @@ def gillnetRescue():
 
 
 def rescueExit():
-    # Exit game 
+    # Exit game
     slowprint(
         "Yay! The rescue team are taking you to rehab, looks like your"
-        "injuries will be fixed and you are going back"
-        "to the open ocean!" + emoji_choice.squid())
+        + "injuries will be fixed and you are going back"
+        + "to the open ocean!" + emoji_choice.squid())
     exit()
 
 
 def tangledExit():
-    # Exit game 
+    # Exit game
     slowprint(
         "Bad storms mean that fishermen's nets are no longer drying"
-        + "on the beach and made it into the water!" 
+        + "on the beach and made it into the water!"
         + emoji_choice.tropicalfish
         + "Oops, you got tangled. You are on your"
         "own in the deep ocean and nobody can help this time! :(")
@@ -175,8 +172,7 @@ def swimWithFriends():
     elif userInput == keyboard.Key.left:
         oilSpill()
     else:
-        raise KeyError
-        print("Please enter a valid key option.")
+        print(KeyError + "Please enter a valid key option (UP or LEFT).")
 
 
 def greatWhite():
@@ -186,7 +182,7 @@ def greatWhite():
     slowprint(
         "Can you hide from the great white shark? He's spotted you!"
         + emoji_choice.shark()
-        + name 
+        + name
         + ", select your next option: Up or Left!")
     userInput = input().lower()
     if userInput == keyboard.Key.up:
@@ -194,15 +190,14 @@ def greatWhite():
     elif userInput == keyboard.Key.left:
         balloonExit()
     else:
-        raise KeyError
-        print("Please enter a valid key option.")
+        print(KeyError + "Please enter a valid key option (UP or LEFT).")
 
 
 def sharkBaitExit():
     # Exit game
     slowprint(
         "He got you! You tried to get away but he's too fast."
-        "You're dead.")
+        + "You're dead.")
     exit()
 
 
@@ -212,7 +207,7 @@ def balloonExit():
         "You swam up and out of sight!"
         + emoji_choice.shell()
         + "But oops! You accidentally swallowed a balloon"
-        "You thought it was a jellyfish! Unlucky..."
+        + "You thought it was a jellyfish! Unlucky..."
         + emoji_choice.jellyfish()
         + "Let's hope that get's recycled out of your body"
         + "or it will be fatal..")
@@ -232,7 +227,7 @@ def oilSpill():
 
 
 def vesselStrikeExit():
-    # Exit game 
+    # Exit game
     slowprint(
         "Poor you! A boat came to watch sealions near by your"
         + "new favourite spot! the boat It's colided with a pod"
@@ -242,7 +237,7 @@ def vesselStrikeExit():
 
 
 def introScene():
-    # Make name recognised as global 
+    # Make name recognised as global
     global name
     name = input("Please enter your name: ")
     slowprint(
@@ -251,18 +246,24 @@ def introScene():
     userInput = input().lower()
 
     # Based on option user selects, proceed to correct destination function
-    while userInput not in directions:
-        slowprint(
-            name + ", your options are: Up, Down, Left, Right")
-        userInput = input().lower()
-        if userInput == keyboard.Key.up:
-            gillnetRescue()
-        elif userInput == keyboard.Key.down:
-            tangledExit()
-        elif userInput == keyboard.Key.left:
-            oaxacaBeach()
-        elif userInput == keyboard.Key.right:
-            swimWithFriends()
+    slowprint(
+        name + ", your options are on your keyboard."
+        + "Throughout this adventure, all you need to tap is:"
+        + "Up, Down, Left or Right"
+        + "And if you would like to escape anytime - hit escape!")
+    userInput = input().lower()
+    if userInput == keyboard.Key.up:
+        gillnetRescue()
+    elif userInput == keyboard.Key.down:
+        tangledExit()
+    elif userInput == keyboard.Key.left:
+        oaxacaBeach()
+    elif userInput == keyboard.Key.right:
+        swimWithFriends()
+    else:
+        print(
+            KeyError + "Please enter a valid key option"
+            + "(UP/DOWN/LEFT/RIGHT)")
 
 
 if __name__ == "__main__":

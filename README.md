@@ -70,6 +70,7 @@ Invent Your Own Computer Games With Python - Al Sweigart
 
 https://www.geeksforgeeks.org/how-to-print-to-stderr-and-stdout-in-python/ - import sys 
 https://pynput.readthedocs.io/en/latest/keyboard.html#pynput.keyboard.Key.up - user input keys
+https://www.geeksforgeeks.org/python-program-to-print-emojis/ - errors on unicode 
 
 ### Tutor/mentor suggestions
 
