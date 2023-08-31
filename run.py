@@ -1,6 +1,6 @@
 import sys
 import time
-from pynput import keyboard
+from pyglet import key
 import pyfiglet
 from emojis import emoji
 from general import (
@@ -53,9 +53,9 @@ def oaxacaBeach():
         + "to Oaxaca Beach! Lets see if you can protect"
         "them all!" + emoji_choice.mexico())
     userInput = input().lower()
-    if userInput == keyboard.Key.left:
+    if userInput == key.LEFT:
         vultureLurk()
-    elif userInput == keyboard.Key.down:
+    elif userInput == key.DOWN:
         disoriented()
     else:
         print(KeyError + "Please enter a valid key option (LEFT or DOWN).")
@@ -70,9 +70,9 @@ def vultureLurk():
         emoji_choice.vulture()
         + name + ", select your next option: Up or Right!")
     userInput = input().lower()
-    if userInput == keyboard.Key.up:
+    if userInput == key.UP:
         fleeExit()
-    elif userInput == keyboard.Key.right:
+    elif userInput == key.RIGHT:
         babiesSafe()
     else:
         print(KeyError + "Please enter a valid key option (UP or RIGHT).")
@@ -167,9 +167,9 @@ def swimWithFriends():
         + "Which way will you go?"
         "Enter your option: Up or Left")
     userInput = input().lower()
-    if userInput == keyboard.Key.up:
+    if userInput == key.UP:
         greatWhite()
-    elif userInput == keyboard.Key.left:
+    elif userInput == key.LEFT:
         oilSpill()
     else:
         print(KeyError + "Please enter a valid key option (UP or LEFT).")
@@ -185,9 +185,9 @@ def greatWhite():
         + name
         + ", select your next option: Up or Left!")
     userInput = input().lower()
-    if userInput == keyboard.Key.up:
+    if userInput == key.UP:
         sharkBaitExit()
-    elif userInput == keyboard.Key.left:
+    elif userInput == key.LEFT:
         balloonExit()
     else:
         print(KeyError + "Please enter a valid key option (UP or LEFT).")
@@ -252,13 +252,13 @@ def introScene():
         + "Up, Down, Left or Right"
         + "And if you would like to escape anytime - hit escape!")
     userInput = input().lower()
-    if userInput == keyboard.Key.up:
+    if userInput == key.UP:
         gillnetRescue()
-    elif userInput == keyboard.Key.down:
+    elif userInput == key.DOWN:
         tangledExit()
-    elif userInput == keyboard.Key.left:
+    elif userInput == key.LEFT:
         oaxacaBeach()
-    elif userInput == keyboard.Key.right:
+    elif userInput == key.RIGHT:
         swimWithFriends()
     else:
         print(
