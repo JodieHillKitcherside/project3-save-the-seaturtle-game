@@ -1,6 +1,6 @@
 import sys
 import time
-from pynput import keyboard
+from pyglet import key
 
 
 def slowprint(all_strings):
@@ -13,7 +13,7 @@ def slowprint(all_strings):
 
 def escape():
     # Implementing a hotkey
-    if input == keyboard.Key.escape:
+    if input == key.ESCAPE:
         exit()
 
 

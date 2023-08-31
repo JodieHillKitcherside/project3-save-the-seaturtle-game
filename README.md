@@ -69,7 +69,7 @@ Invent Your Own Computer Games With Python - Al Sweigart
 - 5 : Dragon Realm 
 
 https://www.geeksforgeeks.org/how-to-print-to-stderr-and-stdout-in-python/ - import sys 
-https://pynput.readthedocs.io/en/latest/keyboard.html#pynput.keyboard.Key.up - user input keys
+https://pyglet.readthedocs.io/en/latest/modules/window_key.html#module-pyglet.window.key - user input keys: tried pyglet/ keyboard, Tkinter * and a number of other failed installations, pyglet key worked even though advice for windows and using Mac
 https://www.geeksforgeeks.org/python-program-to-print-emojis/ - errors on unicode 
 
 ### Tutor/mentor suggestions
