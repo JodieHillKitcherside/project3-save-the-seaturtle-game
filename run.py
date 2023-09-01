@@ -18,9 +18,8 @@ print(result)
 
 
 """
-
+emoji_choice = Emoji()
 """
-emoji_choice = Emoji
 
 
 def main():
@@ -31,11 +30,11 @@ def main():
 def exit():
     # Exit function exits the game
     slowprint(
-        "GAME OVER" + name + skull +
+        "GAME OVER" + name + Emoji.skull +
         "Well done on getting that far. I'm sure you've worked out by now" +
         "that unfortunately sea turtles face many threats to their survival" +
         "and although some are natural - most are human threats." +
-        Emoji.pirateflag() +
+        emoji_choice.pirateflag() +
         "If you survived, you're made of strong stuff. It's estimated that" +
         "only 1 in 1000 sea turtles make it to adult turtle."
         + emoji_choice.seaturtle())

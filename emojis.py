@@ -1,5 +1,3 @@
-from emoji import emojize
-
 """
 Creates instance of emoji
 """
@@ -39,11 +37,8 @@ class Emoji:
         self.biohazard = " \U00002623 \n"
         self.mexico = " \U0001F1F2 \n"
         self.wave = " \U0001F30A \n"
-        self.pirateflag = " \U0001F3F4 \n
+        self.pirateflag = " \U0001F3F4 \n"
         self.skull = " \U0001F480 \n"
-
-
-
 
 
 """Emoji()
