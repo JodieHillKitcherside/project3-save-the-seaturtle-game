@@ -8,14 +8,14 @@ from general import (
     escape,
     check_user_input
 )
-from print_statements import (
-    balloonExit,
-    tangledExit,
-    sharkBaitExit,
-    vesselStrikeExit,
-    beachPartyExit,
+from statements import (
+    balloonExitPrint,
+    tangledExitPrint,
+    sharkBaitExitPrint,
+    vesselStrikeExitPrint,
+    beachPartyExitPrint,
     babiesSafePrint,
-    fleeExit
+    fleeExitPrint
 )
 
 
@@ -97,27 +97,9 @@ def babiesSafe():
     slowPrintExit(babiesSafePrint)
 
 
-"""
-def babiesSafe():
-    # Exit game
-    slowprint(
-        "Phew! You dug a deep nest and all the babies are safe!" +
-        emoji_choice.whiteheart()
-        + "You tried so hard in the heat and wading through the thick sand."
-        + emoji_choice.clapping()
-        + "Amazing, you have 100 baby turtle eggs protected!" +
-        emoji_choice.blowfish())
-    exit()"""
-
 def fleeExit():
     # Exit game
-    slowprint(
-        "Vultures viciously circled and you fled back to the ocean!"
-        + emoji_choice.wave +
-        "You're so lucky! You made it back to ride the tide!"
-        + emoji_choice.lightblueheart
-        + "You can try again tomorrow.")
-    exit()
+    slowPrintExit(fleeExitPrint)
 
 
 def disoriented():
@@ -134,9 +116,7 @@ def disoriented():
 
 def beachPartyExit():
     # Exit game
-    slowprint(
-        "Blast! The people are startling you."
-        + "There is a beach party. There's nowhere to lay!")
+    slowPrintExit(beachPartyExit)
 
 
 def gillnetRescue():
@@ -153,22 +133,12 @@ def gillnetRescue():
 
 def rescueExit():
     # Exit game
-    slowprint(
-        "Yay! The rescue team are taking you to rehab, looks like your"
-        + "injuries will be fixed and you are going back"
-        + "to the open ocean!" + emoji_choice.squid)
-    exit()
+    slowPrintExit(rescueExitPrint)
 
 
 def tangledExit():
     # Exit game
-    slowprint(
-        "Bad storms mean that fishermen's nets are no longer drying"
-        + "on the beach and made it into the water!"
-        + emoji_choice.tropicalfish
-        + "Oops, you got tangled. You are on your"
-        "own in the deep ocean and nobody can help this time! :(")
-    exit()
+    slowPrintExit(tangledExitPrint)
 
 
 def swimWithFriends():
@@ -213,23 +183,12 @@ def greatWhite():
 
 def sharkBaitExit():
     # Exit game
-    slowprint(
-        "He got you! You tried to get away but he's too fast."
-        + "You're dead.")
-    exit()
+    slowPrintExit(sharkBaitExitPrint)
 
 
 def balloonExit():
     # Exit game
-    slowprint(
-        "You swam up and out of sight!"
-        + emoji_choice.shell
-        + "But oops! You accidentally swallowed a balloon"
-        + "You thought it was a jellyfish! Unlucky..."
-        + emoji_choice.jellyfish
-        + "Let's hope that get's recycled out of your body"
-        + "or it will be fatal..")
-    exit()
+    slowPrintExit(balloonExitPrint)
 
 
 def oilSpill():
@@ -246,12 +205,7 @@ def oilSpill():
 
 def vesselStrikeExit():
     # Exit game
-    slowprint(
-        "Poor you! A boat came to watch sealions near by your"
-        + "new favourite spot! the boat It's colided with a pod"
-        + "of seals. You haven't been able to reach the surface this time!"
-        + emoji_choice.seal)
-    exit()
+    slowPrintExit(vesselStrikeExitPrint)
 
 
 def introScene():
