@@ -41,136 +41,133 @@ class Emoji:
         self.skull = " \U0001F480 \n"
 
 
-"""Emoji()
+    def lightblueheart_emoji(self):
+        return f"{self.lightblueheart}"
 
 
-def lightblueheart(self):
-    return f"{self.lightblueheart}"
+    def whiteheart_emoji(self):
+        return f"{self.whiteheart}"
 
 
-def whiteheart(self):
-    return f"{self.whiteheart}"
+    def handwave_emoji(self):
+        return f"{self.handwave}"
 
 
-def handwave(self):
-    return f"{self.handwave}"
+    def okay(self):
+        return f"{self.okay}"
 
 
-def okay(self):
-    return f"{self.okay}"
+    def clapping_emoji(self):
+        return f"{self.clapping}"
 
 
-def clapping(self):
-    return f"{self.clapping}"
+    def seaturtle_emoji(self):
+        return f"{self.seaturtle}"
 
 
-def seaturtle(self):
-    return f"{self.seaturtle}"
+    def wave_emoji(self):
+        return f"{self.wave}"
 
 
-def wave(self):
-    return f"{self.wave}"
+    def dolphin_emoji(self):
+        return f"{self.dolphin}"
 
 
-def dolphin(self):
-    return f"{self.dolphin}"
+    def tropicalfish_emoji(self):
+        return f"{self.tropicalfish}"
 
 
-def tropicalfish(self):
-    return f"{self.tropicalfish}"
+    def blowfish_emoji(self):
+        return f"{self.blowfish}"
 
 
-def blowfish(self):
-    return f"{self.blowfish}"
+    def shark(self):
+        return f"{self.shark}"
 
 
-def shark(self):
-    return f"{self.shark}"
+    def octopus(self):
+        return f"{self.octopus}"
 
 
-def octopus(self):
-    return f"{self.octopus}"
+    def shell(self):
+        return f"{self.shell}"
 
 
-def shell(self):
-    return f"{self.shell}"
+    def reef(self):
+        return f"{self.reef}"
 
 
-def reef(self):
-    return f"{self.reef}"
+    def jellyfish(self):
+        return f"{self.jellyfish}"
 
 
-def jellyfish(self):
-    return f"{self.jellyfish}"
+    def lobster(self):
+        return f"{self.lobster}"
 
 
-def lobster(self):
-    return f"{self.lobster}"
+    def seal(self):
+        return f"{self.seal}"
 
 
-def seal(self):
-    return f"{self.seal}"
+    def squid(self):
+        return f"{self.squid}"
 
 
-def squid(self):
-    return f"{self.squid}"
+    def egg(self):
+        return f"{self.egg}"
 
 
-def egg(self):
-    return f"{self.egg}"
+    def vulture(self):
+        return f"{self.vulture}"
 
 
-def vulture(self):
-    return f"{self.vulture}"
+    def crab(self):
+        return f"{self.crab}"
 
 
-def crab(self):
-    return f"{self.crab}"
+    def buoy(self):
+        return f"{self.buoy}"
 
 
-def buoy(self):
-    return f"{self.buoy}"
+    def motorboat(self):
+        return f"{self.motorboat}"
 
 
-def motorboat(self):
-    return f"{self.motorboat}"
+    def compass(self):
+        return f"{self.compass}"
 
 
-def compass(self):
-    return f"{self.compass}"
+    def divingmask(self):
+        return f"{self.divingmask}"
 
 
-def divingmask(self):
-    return f"{self.divingmask}"
+    def e_up(self):
+        return f"{self.e_up}"
 
 
-def e_up(self):
-    return f"{self.e_up}"
+    def e_down(self):
+        return f"{self.e_down}"
 
 
-def e_down(self):
-    return f"{self.e_down}"
+    def e_right(self):
+        return f"{self.e_right}"
 
 
-def e_right(self):
-    return f"{self.e_right}"
+    def e_left(self):
+        return f"{self.e_left}"
 
 
-def e_left(self):
-    return f"{self.e_left}"
+    def biohazard(self):
+        return f"{self.biohazard}"
 
 
-def biohazard(self):
-    return f"{self.biohazard}"
+    def mexico(self):
+        return f"{self.mexico}"
 
 
-def mexico(self):
-    return f"{self.mexico}"
+    def pirateflag(self):
+        return f"{self.pirateflag}"
 
 
-def pirateflag(self):
-    return f"{self.pirateflag}"
-
-
-def skull(self):
-    return f"{self.skull}" """
+    def skull(self):
+        return f"{self.skull}" 

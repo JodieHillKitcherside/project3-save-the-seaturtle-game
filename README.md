@@ -71,6 +71,11 @@ Invent Your Own Computer Games With Python - Al Sweigart
 https://www.geeksforgeeks.org/how-to-print-to-stderr-and-stdout-in-python/ - import sys 
 https://pyglet.readthedocs.io/en/latest/modules/window_key.html#module-pyglet.window.key - user input keys: tried pyglet/ keyboard, Tkinter * and a number of other failed installations, pyglet key worked even though advice for windows and using Mac
 https://www.geeksforgeeks.org/python-program-to-print-emojis/ - errors on unicode 
+your functions are defined directly in the emojis file, they're not methods of the Emoji class. If you want them to be methods of the class they need to be indented
+Oisin profile
+the __init__ fuction here is a method of the class as it's indented here
+all of your attributes have the same names as your methods, which will conflict
+repeated code
 
 ### Tutor/mentor suggestions
 

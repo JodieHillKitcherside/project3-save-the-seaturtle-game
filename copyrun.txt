@@ -29,6 +29,7 @@ print(result)
 emoji_choice = Emoji()
 
 
+
 def main():
     # Introduce main start screen
     introScene()
@@ -37,14 +38,14 @@ def main():
 def exit():
     # Exit function exits the game
     slowprint(
-        "GAME OVER" + name + emoji_choice.skull +
+        "GAME OVER" + name + Emoji.skull +
         "Well done on getting that far. I'm sure you've worked out by now" +
         "that unfortunately sea turtles face many threats to their survival" +
         "and although some are natural - most are human threats." +
-        emoji_choice.pirateflag +
+        emoji_choice.pirateflag() +
         "If you survived, you're made of strong stuff. It's estimated that" +
         "only 1 in 1000 sea turtles make it to adult turtle."
-        + emoji_choice.seaturtle)
+        + emoji_choice.seaturtle())
     sys.exit()
 
 
@@ -62,9 +63,9 @@ def oaxacaBeach():
     slowprint(
         "Wow mama! You have many eggs to lay, you've" +
         "ended up swimming"
-        + emoji_choice.egg
+        + emoji_choice.egg()
         + "to Oaxaca Beach! Lets see if you can protect"
-        "them all!" + emoji_choice.mexico)
+        "them all!" + emoji_choice.mexico())
     userInput = input().lower()
     if userInput == key.LEFT:
         vultureLurk()
@@ -80,7 +81,7 @@ def vultureLurk():
     # Based on right, proceed to babiesSafe
     slowprint(
         "Watch out! Vultures are out to attack!" +
-        emoji_choice.vulture
+        emoji_choice.vulture()
         + name + ", select your next option: Up or Right!")
     userInput = input().lower()
     if userInput == key.UP:
@@ -124,9 +125,9 @@ def disoriented():
     # Continue to beachPartExit
     slowprint(
         "You seem a bit disorientated! Humans like to surf here and"
-        + emoji_choice.divingmask
+        + emoji_choice.divingmask()
         + "this means the beach has changed so much since you were"
-        + emoji_choice.compass
+        + emoji_choice.compass()
         + "first here, 20 years ago. Will you find a quiet place"
         "to protect your eggs?")
     beachPartyExit()
@@ -143,9 +144,9 @@ def gillnetRescue():
     # Continue to rescueExit
     slowprint(
         "Oh! Unfortunately, you have been accidentally captured!"
-        + emoji_choice.motorboat
+        + emoji_choice.motorboat()
         + "You are stuck in gillnets and struggling to get out"
-        + emoji_choice.buoy
+        + emoji_choice.buoy()
         + "means you have deep cuts on your flippers..."
         + "Fishermen are so sorry and have called ocean rescue!")
     rescueExit()
@@ -156,7 +157,7 @@ def rescueExit():
     slowprint(
         "Yay! The rescue team are taking you to rehab, looks like your"
         + "injuries will be fixed and you are going back"
-        + "to the open ocean!" + emoji_choice.squid)
+        + "to the open ocean!" + emoji_choice.squid())
     exit()
 
 
@@ -177,11 +178,11 @@ def swimWithFriends():
     # Based on left, proceed to oilSpill
     slowprint(
         "Looks like you've found some friends! you are swimming around"
-        + emoji_choice.jellyfish
+        + emoji_choice.jellyfish()
         + "kelp, little fishes and terrible claw lobsters."
-        + emoji_choice.lobster
+        + emoji_choice.lobster()
         + "Woah!There is lots of food here!"
-        + emoji_choice.crab
+        + emoji_choice.crab()
         + "Which way will you go?"
         "Enter your option: Up or Left")
     userInput = input().lower()
@@ -199,7 +200,7 @@ def greatWhite():
     # Based on left, proceed to balloonExit
     slowprint(
         "Can you hide from the great white shark? He's spotted you!"
-        + emoji_choice.shark
+        + emoji_choice.shark()
         + name
         + ", select your next option: Up or Left!")
     userInput = input().lower()
@@ -223,10 +224,10 @@ def balloonExit():
     # Exit game
     slowprint(
         "You swam up and out of sight!"
-        + emoji_choice.shell
+        + emoji_choice.shell()
         + "But oops! You accidentally swallowed a balloon"
         + "You thought it was a jellyfish! Unlucky..."
-        + emoji_choice.jellyfish
+        + emoji_choice.jellyfish()
         + "Let's hope that get's recycled out of your body"
         + "or it will be fatal..")
     exit()
@@ -236,9 +237,9 @@ def oilSpill():
     # Continue to vesselStrikeExit
     slowprint(
         "There's been an oil spill affecting your favourite"
-        + emoji_choice.biohazard
+        + emoji_choice.biohazard()
         + "corals! You are going to have to rest by the"
-        + emoji_choice.reef
+        + emoji_choice.reef()
         + "mangroves instead. Take a five minute rest and get"
         + "back to swimming.")
     vesselStrikeExit()
@@ -250,7 +251,7 @@ def vesselStrikeExit():
         "Poor you! A boat came to watch sealions near by your"
         + "new favourite spot! the boat It's colided with a pod"
         + "of seals. You haven't been able to reach the surface this time!"
-        + emoji_choice.seal)
+        + emoji_choice.seal())
     exit()
 
 
@@ -289,9 +290,9 @@ if __name__ == "__main__":
         "Welcome to the Save the Sea Turtle Game!"
         # ... [introductory text]
         + "Ahoy! As an endangered sea turtle, you are peacefully riding"
-        + emoji_choice.whale
+        + emoji_choice.whale()
         + "the Pacific Ocean. We are going to take you on an adventure!"
-        + emoji_choice.dolphin
+        + emoji_choice.dolphin()
         + "Watch out for the Great White Shark and other great terrors."
-        + emoji_choice.okay)
+        + emoji_choice.okay())
     main()
