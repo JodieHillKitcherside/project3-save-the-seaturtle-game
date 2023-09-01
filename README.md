@@ -51,8 +51,8 @@ Allowing the game to become a RPG would simplify the storyline and make this mor
 ### Solved Bugs
 
 - Terminal identified a number of indentation errors - quickly resolved with human eye. 
-- Exit function would not work as parentheses included each individual function to call, fixed by calling main function, with all other functions inside. Thus, avoided repetition in code. 
-- Import pygame and import os from OSMOD would not provide the correct import of the keyborad needed to link user pressed keys and user input to the game. Instead, keyboard has been imported. 
+- Exit function would not work as parentheses included each individual function to call, fixed by calling main function, with all other functions inside. Thus, avoided repetition in code. Added a reusable function.
+- Import pygame, import os from OSMOD and import pynput would not provide the correct import of the keyborad needed to link user pressed keys and user input to the game. Instead, pyglet key has been imported. 
 
 ### Unsolved Bugs
 

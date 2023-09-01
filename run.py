@@ -2,7 +2,7 @@ import sys
 import time
 from pyglet import key
 import pyfiglet
-from emojis import emoji
+from emojis import Emoji
 from general import (
     slowprint,
     escape,
@@ -18,9 +18,9 @@ print(result)
 
 
 """
-Declare emojis variable
+
 """
-emoji_choice = emoji
+emoji_choice = Emoji
 
 
 def main():
@@ -31,11 +31,11 @@ def main():
 def exit():
     # Exit function exits the game
     slowprint(
-        "GAME OVER" + name + emoji_choice.skull() +
+        "GAME OVER" + name + skull.unicode() +
         "Well done on getting that far. I'm sure you've worked out by now" +
         "that unfortunately sea turtles face many threats to their survival" +
         "and although some are natural - most are human threats." +
-        emoji_choice.pirateflag() +
+        Emoji.pirateflag() +
         "If you survived, you're made of strong stuff. It's estimated that" +
         "only 1 in 1000 sea turtles make it to adult turtle."
         + emoji_choice.seaturtle())
