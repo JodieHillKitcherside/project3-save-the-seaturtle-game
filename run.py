@@ -1,4 +1,3 @@
-import sys
 from statements import (
     beachPartyExitPrint,
     fleeExitPrint,
@@ -9,21 +8,22 @@ from statements import (
     vesselStrikeExitPrint,
     babiesSafePrint
 )
+import sys
+import time
 import keyboard
 import pyfiglet
 from emojis import Emoji
-import time
 
 
 def slowprint(all_strings):
-    # Styling all strings with a delayed type time 
+    # Styling all strings with a delayed type time
     for each_character in all_strings + "\n":
         sys.stdout.write(each_character)
         sys.stdout.flush()
         time.sleep(1/17)
 
 
-event = keyboard.read_event()  # Capture a keyboard event 
+event = keyboard.read_event()  # Capture a keyboard event
 
 
 def escape():
@@ -48,7 +48,7 @@ result = pyfiglet.figlet_format("Save the Sea Turtle", font="digital")
 print(result)
 
 
-# Rename Emoji class 
+# Rename Emoji class
 emoji_choice = Emoji()
 
 
@@ -94,7 +94,7 @@ def oaxacaBeach():
     if event.name == 'l':
         vultureLurk()
     elif event.name == 'd':
-        disorientated()
+        disoriented()
     else:
         print(KeyError + "Please enter a valid key option.")
 
@@ -111,7 +111,7 @@ def vultureLurk():
         + " or choose 'r'" + emoji_choice.e_right)
     if event.name == 'u':
         fleeExit()
-    elif event.name == 'r'
+    elif event.name == 'r':
         babiesSafe()
     else:
         print(KeyError + "Please enter a valid key option.")
@@ -256,8 +256,9 @@ def introScene():
     elif event.name == 'r':
         swimWithFriends()
     else:
-        print(KeyError + "Please enter a valid key option"
-                    + "(u/d/l/r)")
+        print(
+            KeyError + "Please enter a valid key option"
+            + "(u/d/l/r)")
 
 
 if __name__ == "__main__":
