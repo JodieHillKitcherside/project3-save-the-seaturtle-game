@@ -15,42 +15,40 @@ from emojis import Emoji
 import time
 
 
-pygame.init()
-
-
 def slowprint(all_strings):
-    # Styling all strings
+    # Styling all strings with a delayed type time 
     for each_character in all_strings + "\n":
         sys.stdout.write(each_character)
         sys.stdout.flush()
         time.sleep(1/17)
 
 
+event = keyboard.read_event()  # Capture a keyboard event 
+
+
 def escape():
     # Implementing a hotkey
-    global event = keyboard.read_event() # Capture a keyboard event 
-        if event.name == 'esc':
-            return main()
-        elif:
-            None
+    if event.name == 'esc':
+        return main()
+    else:
+        None
 
 
 def check_user_input(input_str):
     # Validates all user input
     # Prints prompt if blank
-    if event.type == "":
+    if event.name == "":
         print("Please enter your input")
     else:
         None
 
 
-"""
-Use pyfiglet module
-"""
+# Use pyfiglet module
 result = pyfiglet.figlet_format("Save the Sea Turtle", font="digital")
 print(result)
 
 
+# Rename Emoji class 
 emoji_choice = Emoji()
 
 
@@ -80,12 +78,6 @@ def slowPrintExit(all_strings):
     exit()
 
 
-def get_pygame_events():
-    # Defines function to check for events
-    pygame_events = pygame.event.get()
-    return pygame_events
-
-
 def oaxacaBeach():
     # Offer user right or down keys to continue game
     # Based on right, proceed to vultureLurk
@@ -95,16 +87,16 @@ def oaxacaBeach():
         "ended up swimming"
         + emoji_choice.egg
         + "to Oaxaca Beach! Lets see if you can protect"
-        "them all!" + emoji_choice.mexico)
-    keys_pressed = get_pygame_events()
-    for event in keys_pressed:
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_LEFT:
-                vultureLurk()
-            if event.key == pygame.K_DOWN:
-                disoriented()
-            else:
-                print(KeyError + "Please enter a valid key option.")
+        + "them all!" + emoji_choice.mexico
+        + " Select your next option:"
+        + " Choose either 'l'" + emoji_choice.e_left
+        + " or choose 'd'" + emoji_choice.e_down)
+    if event.name == 'l':
+        vultureLurk()
+    elif event.name == 'd':
+        disorientated()
+    else:
+        print(KeyError + "Please enter a valid key option.")
 
 
 def vultureLurk():
@@ -114,16 +106,15 @@ def vultureLurk():
     slowprint(
         "Watch out! Vultures are out to attack!" +
         emoji_choice.vulture
-        + name + ", select your next option: Up or Right!")
-    keys_pressed = get_pygame_events()
-    for event in keys_pressed:
-        if event.type == pygame.KEYDOWN:
-            if event.key == K_UP:
-                fleeExit()
-            elif event.key == K_RIGHT:
-                babiesSafe()
-            else:
-                print(KeyError + "Please enter a valid key option.")
+        + name + ", select your next option:"
+        + " Choose either 'u'" + emoji_choice.e_up
+        + " or choose 'r'" + emoji_choice.e_right)
+    if event.name == 'u':
+        fleeExit()
+    elif event.name == 'r'
+        babiesSafe()
+    else:
+        print(KeyError + "Please enter a valid key option.")
     vultureLurk()
 
 
@@ -188,16 +179,14 @@ def swimWithFriends():
         + "Woah!There is lots of food here!"
         + emoji_choice.crab
         + "Which way will you go?"
-        "Enter your option: Up or Left")
-    keys_pressed = get_pygame_events()
-    for event in keys_pressed:
-        if event.type == pygame.KEYDOWN:
-            if event.key == K.RIGHT:
-                greatWhite()
-        elif event.key == K_LEFT:
-                oilSpill()
-        else:
-            print(KeyError + "Please enter a valid key option.")
+        + " Enter your option: 'u'" + emoji_choice.e_up
+        + " or 'l'" + emoji_choice.e_left)
+    if event.name == 'u':
+        greatWhite()
+    elif event.name == 'l;':
+        oilSpill()
+    else:
+        print(KeyError + "Please enter a valid key option.")
 
 
 def greatWhite():
@@ -208,16 +197,14 @@ def greatWhite():
         "Can you hide from the great white shark? He's spotted you!"
         + emoji_choice.shark
         + name
-        + ", select your next option: Up or Left!")
-    keys_pressed = get_pygame_events()
-    for event in keys_pressed:
-        if event.type == pygame.KEYDOWN:
-            if event.key == K_UP:
-                sharkBaitExit()
-            elif event.key == K_LEFT:
-                balloonExit()
-            else:
-                print(KeyError + "Please enter a valid key option.")
+        + ", select your next option: 'u'" + emoji_choice.e_up
+        + " or 'l'" + emoji_choice.e_left)
+    if event.key == 'u':
+        sharkBaitExit()
+    elif event.key == 'l':
+        balloonExit()
+    else:
+        print(KeyError + "Please enter a valid key option.")
 
 
 def sharkBaitExit():
@@ -255,25 +242,22 @@ def introScene():
         name + ", great. Now you have 4 directions to choose from."
         + " Your options are on your keyboard."
         + " Throughout this adventure, all you need to tap is:"
-        + " Up, Down, Left or Right"
+        + " 'u' button for Up, 'd' button for Down, 'l' button for Left"
+        + " or 'r' button for Right"
         + " And if you would like to escape anytime - hit escape!"
         + " Which way will you go next?"
         + " Enter key")
-    keys_pressed = get_pygame_events()
-    for event in keys_pressed:
-        if event.type == pygame.KEYDOWN:
-            if event.key == KEY.UP:
-                gillnetRescue()
-            elif event.key == K_DOWN:
-                tangledExit()
-            elif event.key == K_LEFT:
-                oaxacaBeach()
-            elif event.key == K_RIGHT:
-                swimWithFriends()
-            else:
-                print(
-                    KeyError + "Please enter a valid key option"
-                    + "(UP/DOWN/LEFT/RIGHT)")
+    if event.name == 'u':
+        gillnetRescue()
+    elif event.name == 'd':
+        tangledExit()
+    elif event.name == 'l':
+        oaxacaBeach()
+    elif event.name == 'r':
+        swimWithFriends()
+    else:
+        print(KeyError + "Please enter a valid key option"
+                    + "(u/d/l/r)")
 
 
 if __name__ == "__main__":
