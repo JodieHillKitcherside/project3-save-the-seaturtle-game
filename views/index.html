@@ -15,54 +15,56 @@
 </head>
 <!-- This is the header containing logo and nav : -->
 
-<body style="vertical-align: middle" background-image="assets/images/background_image.jpeg">
-    <header style="font-family: 'Lilita One', cursive;
-    font-family: 'Playfair Display', serif;
-    font-family: 'Playfair Display SC', serif;
-    font-family: 'Roboto Condensed', sans-serif; color: white;">
+<body style="vertical-align: middle">
+    <div background-image="assets/images/background_image.jpeg">
+        <header style="font-family: 'Lilita One', cursive;
+            font-family: 'Playfair Display', serif;
+            font-family: 'Playfair Display SC', serif;
+            font-family: 'Roboto Condensed', sans-serif; color: white;">
             <h1>Save the Sea Turtle!</h2>
             <h2>An Extinction Game, by Jodie Hill-Kitcherside</h1>
-     </header>
-    <br>
-    <!-- This is the main : -->
-    <main>
-
-    <button onclick="window.location.reload()">Run Program</button>
-    <div id="terminal"></div>
-
-    <script>
-        var term = new Terminal({
-            cols: 80,
-            rows: 24
-        });
-        term.open(document.getElementById('terminal'));
-        term.writeln('Running startup command: python3 run.py');
-        term.writeln('');
-
-        var ws = new WebSocket(location.protocol.replace('http', 'ws') + '//' + location.hostname + (location.port ? (
-            ':' + location.port) : '') + '/');
-
-        ws.onopen = function () {
-            new attach.attach(term, ws);
-        };
-
-        ws.onerror = function (e) {
-            console.log(e);
-        };
-        // Set focus in the terminal
-        document.getElementsByClassName("xterm-helper-textarea")[0].focus();
-    </script>
-    </main>
-    <footer style="display:flex;">
-        <h3 style="font-family: 'Lilita One', cursive;
-        font-family: 'Playfair Display', serif;
-        font-family: 'Playfair Display SC', serif;
-        font-family: 'Roboto Condensed', sans-serif; color: white; text-decoration: none;"><a href = "https://support.wwf.org.uk/adopt-a-turtle?utm_source=Google-Brand-Plus&utm_medium=PaidSearch-Brand&pc=AWD014002&ds_rl=1263317&ds_rl=1262308&ds_rl=1263317&ds_rl=1262308&gclid=Cj0KCQjwl8anBhCFARIsAKbbpyQ5AdmtU7beTU7N01I0fDNsN8cHSymU5g3yn-k7Ulrkz_iIh9NTaX0aAqaAEALw_wcB&gclsrc=aw.ds">Adopt a Sea Turtle</h3>
+        </header>
         <br>
-        <br>
-        <h3 style="font-family: 'Lilita One', cursive;
-        font-family: 'Playfair Display', serif;
-        font-family: 'Playfair Display SC', serif;
-        font-family: 'Roboto Condensed', sans-serif; color: white; text-decoration: none;"><a href = "https://oliveridleyproject.org/threats-to-sea-turtles">Read more about the threats to Sea Turtles here</h3>
-    </footer>
+        <!-- This is the main : -->
+        <main>
+
+        <button onclick="window.location.reload()">Run Program</button>
+        <div id="terminal"></div>
+
+        <script>
+            var term = new Terminal({
+                cols: 80,
+                rows: 24
+            });
+            term.open(document.getElementById('terminal'));
+            term.writeln('Running startup command: python3 run.py');
+            term.writeln('');
+
+            var ws = new WebSocket(location.protocol.replace('http', 'ws') + '//' + location.hostname + (location.port ? (
+                ':' + location.port) : '') + '/');
+
+            ws.onopen = function () {
+                new attach.attach(term, ws);
+            };
+
+            ws.onerror = function (e) {
+                console.log(e);
+            };
+            // Set focus in the terminal
+            document.getElementsByClassName("xterm-helper-textarea")[0].focus();
+        </script>
+        </main>
+        <footer style="display:flex;">
+            <h3 style="font-family: 'Lilita One', cursive;
+            font-family: 'Playfair Display', serif;
+            font-family: 'Playfair Display SC', serif;
+            font-family: 'Roboto Condensed', sans-serif; color: white; text-decoration: none;"><a href = "https://support.wwf.org.uk/adopt-a-turtle?utm_source=Google-Brand-Plus&utm_medium=PaidSearch-Brand&pc=AWD014002&ds_rl=1263317&ds_rl=1262308&ds_rl=1263317&ds_rl=1262308&gclid=Cj0KCQjwl8anBhCFARIsAKbbpyQ5AdmtU7beTU7N01I0fDNsN8cHSymU5g3yn-k7Ulrkz_iIh9NTaX0aAqaAEALw_wcB&gclsrc=aw.ds">Adopt a Sea Turtle</a></h3>
+            <br>
+            <br>
+            <h3 style="font-family: 'Lilita One', cursive;
+            font-family: 'Playfair Display', serif;
+            font-family: 'Playfair Display SC', serif;
+            font-family: 'Roboto Condensed', sans-serif; color: white; text-decoration: none;"><a href = "https://oliveridleyproject.org/threats-to-sea-turtles">Read more about the threats to Sea Turtles here</a></h3>
+        </footer>
+</div>
 </body>
