@@ -24,9 +24,15 @@ This is a basic structure plan for the code, mapping out the necessary functions
 
 ## Existing Features
 
-## Code errors 
-## Code decorators?
-## If else functions
+### Move through inputs 
+Inputs have been created to include the user in the game, adding to the user experience within the terminal. First, the user is asked to type their name, then the user is asked to choose from a list of key options: Up, Down, Left and Right. 
+The name input is used throughout to draw reference back to the user.
+
+### Code errors 
+Wrong or missing inputs will be identified and an error message and print statement will appear. 
+
+### If else functions
+Most next steps as you progress throughout the quiz provide a question with two directions to choose from in order to continue. If the user selects from either key, they will progress to the next step in the sea turtle's adventure. If there is another option selected, there will be an error message. 
 
 ## Features left to implement
 
@@ -45,10 +51,9 @@ Allowing the game to become a RPG would simplify the storyline and make this mor
 - Emojis.py hosts the Emoji() class with all emoji unicodes, this is then sourced in run.py and used as part of a string. 
 - Statements.py hosts the statements for each function called in run.py that follows the reusable function 'slowPrintExit(). This was created to simplify code and cut repetition. 
 
-# Frameworks and libraries used 
-- Sys used for slowprint() on general.py
-- Time used for slowprint() on general.py
-- Pyglet import key for key arrows 
+# Frameworks, libraries and modules used 
+- Sys used for slowprint() 
+- Time used for slowprint() 
 - Pyfiglet for termainal header - ASCII art 
 - Emojis import Emoji - for emojis.py, run.py and statements.py
 
@@ -68,12 +73,18 @@ Index.html displays a background image of a vivid colourful ocean bed. White hea
 
 - Exit function would not work as parentheses included each individual function to call, fixed by calling main function, with all other functions inside. Thus, avoided repetition in code. Added a reusable function.
 
-- Import pygame, import os from OSMOD , import pynput and import Tkinter * would not provide the correct import of the keyboard needed to link user pressed keys and user input to the game. Instead, pyglet key has been imported. 
-
 - Emoji class use: All of attributes in the emojis.py file had the same names as methods, which conflicted and was 
 repeated code. Emojis.py has 1 class and calls the class in run.py and statements.py at the string ie. "+ emoji_choice.seaturtle".
 
 ### Unsolved Bugs
+
+Key arrows:
+
+- Imported keyboard, pyglet, pygame, os from OSMOD, pynput and Tkinter *; all separately to try to import key arrows for use in a game. As the site runs solely on a terminal, the graphical inputs weren't supported. 
+- Instead have reverted to alphanumeric input only and described keys 'u' as Up for example. 
+
+Import error - script running as root:
+- Backend error suggesting that I must use a root whilst using the library on Linux. Have installed a root with myenv.
 
 https://stackoverflow.com/questions/7053971/python-trouble-using-escape-key-to-exit
 https://stackoverflow.com/questions/25494726/how-to-use-pygame-keydown-to-execute-something-every-time-through-a-loop-while-t
