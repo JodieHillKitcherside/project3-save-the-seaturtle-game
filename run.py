@@ -1,25 +1,24 @@
-import sys
-import time
-import pygame
-import random
-from pygame.locals import *
-import pyfiglet
-from emojis import Emoji
 from general import (
     slowprint,
     escape,
     check_user_input
 )
+import sys
 from statements import (
-    balloonExitPrint,
+    beachPartyExitPrint,
+    fleeExitPrint,
+    rescueExitPrint,
     tangledExitPrint,
     sharkBaitExitPrint,
+    balloonExitPrint,
     vesselStrikeExitPrint,
-    beachPartyExitPrint,
-    babiesSafePrint,
-    fleeExitPrint,
-    rescueExitPrint
+    babiesSafePrint
 )
+import pygame
+import random
+from pygame.locals import *
+import pyfiglet
+from emojis import Emoji
 
 
 pygame.init()
