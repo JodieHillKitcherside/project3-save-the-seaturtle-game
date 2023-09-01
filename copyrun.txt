@@ -1,23 +1,98 @@
 import sys
-import time
-from pyglet import key
+from statements import (
+    beachPartyExitPrint,
+    fleeExitPrint,
+    rescueExitPrint,
+    tangledExitPrint,
+    sharkBaitExitPrint,
+    balloonExitPrint,
+    vesselStrikeExitPrint,
+    babiesSafePrint
+)
+import pygame
+import random
+from pygame.locals import *
 import pyfiglet
 from emojis import Emoji
-from general import (
-    slowprint,
-    escape,
-    check_user_input
-)
-from print_statements import (
-    balloonExit,
-    tangledExit,
-    sharkBaitExit,
-    vesselStrikeExit,
-    beachPartyExit,
-    babiesSafePrint,
-    fleeExit
-)
 
+import sys
+import time
+import pygame
+from pygame.locals import *
+# from run import main
+
+
+pygame.init()
+
+
+def slowprint(all_strings):
+    # Styling all strings
+    for each_character in all_strings + "\n":
+        sys.stdout.write(each_character)
+        sys.stdout.flush()
+        time.sleep(1/17)
+
+
+def escape():
+    # Implementing a hotkey
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            return main()
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                main()
+
+
+def check_user_input(input_str):
+    # Validates all user input
+    # Prints prompt if blank
+    for event in pygame.event.get():
+        if event.type == "":
+            print("Please enter your input")
+        else:
+            None
+
+import sys
+import time
+
+import pygame
+from pygame.locals import *
+# from run import main
+
+
+pygame.init()
+
+
+def slowprint(all_strings):
+    # Styling all strings
+    for each_character in all_strings + "\n":
+        sys.stdout.write(each_character)
+        sys.stdout.flush()
+        time.sleep(1/17)
+
+
+def escape():
+    # Implementing a hotkey
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            return main()
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                main()
+
+
+def check_user_input(input_str):
+    # Validates all user input
+    # Prints prompt if blank
+    for event in pygame.event.get():
+        if event.type == "":
+            print("Please enter your input")
+        else:
+            None
+
+
+
+pygame.init()
 
 """
 Use pyfiglet module
@@ -29,7 +104,6 @@ print(result)
 emoji_choice = Emoji()
 
 
-
 def main():
     # Introduce main start screen
     introScene()
@@ -38,14 +112,14 @@ def main():
 def exit():
     # Exit function exits the game
     slowprint(
-        "GAME OVER" + name + Emoji.skull +
+        "GAME OVER" + name + emoji_choice.skull +
         "Well done on getting that far. I'm sure you've worked out by now" +
         "that unfortunately sea turtles face many threats to their survival" +
         "and although some are natural - most are human threats." +
-        emoji_choice.pirateflag() +
+        emoji_choice.pirateflag +
         "If you survived, you're made of strong stuff. It's estimated that" +
         "only 1 in 1000 sea turtles make it to adult turtle."
-        + emoji_choice.seaturtle())
+        + emoji_choice.seaturtle)
     sys.exit()
 
 
@@ -56,6 +130,12 @@ def slowPrintExit(all_strings):
     exit()
 
 
+def get_pygame_events():
+    # Defines function to check for events
+    pygame_events = pygame.event.get()
+    return pygame_events
+
+
 def oaxacaBeach():
     # Offer user right or down keys to continue game
     # Based on right, proceed to vultureLurk
@@ -63,16 +143,18 @@ def oaxacaBeach():
     slowprint(
         "Wow mama! You have many eggs to lay, you've" +
         "ended up swimming"
-        + emoji_choice.egg()
+        + emoji_choice.egg
         + "to Oaxaca Beach! Lets see if you can protect"
-        "them all!" + emoji_choice.mexico())
-    userInput = input().lower()
-    if userInput == key.LEFT:
-        vultureLurk()
-    elif userInput == key.DOWN:
-        disoriented()
-    else:
-        print(KeyError + "Please enter a valid key option (LEFT or DOWN).")
+        "them all!" + emoji_choice.mexico)
+    keys_pressed = get_pygame_events()
+    for event in keys_pressed:
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_LEFT:
+                vultureLurk()
+            if event.key == pygame.K_DOWN:
+                disoriented()
+            else:
+                print(KeyError + "Please enter a valid key option.")
 
 
 def vultureLurk():
@@ -81,15 +163,17 @@ def vultureLurk():
     # Based on right, proceed to babiesSafe
     slowprint(
         "Watch out! Vultures are out to attack!" +
-        emoji_choice.vulture()
+        emoji_choice.vulture
         + name + ", select your next option: Up or Right!")
-    userInput = input().lower()
-    if userInput == key.UP:
-        fleeExit()
-    elif userInput == key.RIGHT:
-        babiesSafe()
-    else:
-        print(KeyError + "Please enter a valid key option (UP or RIGHT).")
+    keys_pressed = get_pygame_events()
+    for event in keys_pressed:
+        if event.type == pygame.KEYDOWN:
+            if event.key == K_UP:
+                fleeExit()
+            elif event.key == K_RIGHT:
+                babiesSafe()
+            else:
+                print(KeyError + "Please enter a valid key option.")
     vultureLurk()
 
 
@@ -98,36 +182,18 @@ def babiesSafe():
     slowPrintExit(babiesSafePrint)
 
 
-"""
-def babiesSafe():
-    # Exit game
-    slowprint(
-        "Phew! You dug a deep nest and all the babies are safe!" +
-        emoji_choice.whiteheart()
-        + "You tried so hard in the heat and wading through the thick sand."
-        + emoji_choice.clapping()
-        + "Amazing, you have 100 baby turtle eggs protected!" +
-        emoji_choice.blowfish())
-    exit()"""
-
 def fleeExit():
     # Exit game
-    slowprint(
-        "Vultures viciously circled and you fled back to the ocean!"
-        + emoji_choice.wave +
-        "You're so lucky! You made it back to ride the tide!"
-        + emoji_choice.lightblueheart
-        + "You can try again tomorrow.")
-    exit()
+    slowPrintExit(fleeExitPrint)
 
 
 def disoriented():
     # Continue to beachPartExit
     slowprint(
         "You seem a bit disorientated! Humans like to surf here and"
-        + emoji_choice.divingmask()
+        + emoji_choice.divingmask
         + "this means the beach has changed so much since you were"
-        + emoji_choice.compass()
+        + emoji_choice.compass
         + "first here, 20 years ago. Will you find a quiet place"
         "to protect your eggs?")
     beachPartyExit()
@@ -135,18 +201,16 @@ def disoriented():
 
 def beachPartyExit():
     # Exit game
-    slowprint(
-        "Blast! The people are startling you."
-        + "There is a beach party. There's nowhere to lay!")
+    slowPrintExit(beachPartyExit)
 
 
 def gillnetRescue():
     # Continue to rescueExit
     slowprint(
         "Oh! Unfortunately, you have been accidentally captured!"
-        + emoji_choice.motorboat()
+        + emoji_choice.motorboat
         + "You are stuck in gillnets and struggling to get out"
-        + emoji_choice.buoy()
+        + emoji_choice.buoy
         + "means you have deep cuts on your flippers..."
         + "Fishermen are so sorry and have called ocean rescue!")
     rescueExit()
@@ -154,22 +218,12 @@ def gillnetRescue():
 
 def rescueExit():
     # Exit game
-    slowprint(
-        "Yay! The rescue team are taking you to rehab, looks like your"
-        + "injuries will be fixed and you are going back"
-        + "to the open ocean!" + emoji_choice.squid())
-    exit()
+    slowPrintExit(rescueExitPrint)
 
 
 def tangledExit():
     # Exit game
-    slowprint(
-        "Bad storms mean that fishermen's nets are no longer drying"
-        + "on the beach and made it into the water!"
-        + emoji_choice.tropicalfish
-        + "Oops, you got tangled. You are on your"
-        "own in the deep ocean and nobody can help this time! :(")
-    exit()
+    slowPrintExit(tangledExitPrint)
 
 
 def swimWithFriends():
@@ -178,20 +232,22 @@ def swimWithFriends():
     # Based on left, proceed to oilSpill
     slowprint(
         "Looks like you've found some friends! you are swimming around"
-        + emoji_choice.jellyfish()
+        + emoji_choice.jellyfish
         + "kelp, little fishes and terrible claw lobsters."
-        + emoji_choice.lobster()
+        + emoji_choice.lobster
         + "Woah!There is lots of food here!"
-        + emoji_choice.crab()
+        + emoji_choice.crab
         + "Which way will you go?"
         "Enter your option: Up or Left")
-    userInput = input().lower()
-    if userInput == key.UP:
-        greatWhite()
-    elif userInput == key.LEFT:
-        oilSpill()
-    else:
-        print(KeyError + "Please enter a valid key option (UP or LEFT).")
+    keys_pressed = get_pygame_events()
+    for event in keys_pressed:
+        if event.type == pygame.KEYDOWN:
+            if event.key == K.RIGHT:
+                greatWhite()
+        elif event.key == K_LEFT:
+                oilSpill()
+        else:
+            print(KeyError + "Please enter a valid key option.")
 
 
 def greatWhite():
@@ -200,46 +256,37 @@ def greatWhite():
     # Based on left, proceed to balloonExit
     slowprint(
         "Can you hide from the great white shark? He's spotted you!"
-        + emoji_choice.shark()
+        + emoji_choice.shark
         + name
         + ", select your next option: Up or Left!")
-    userInput = input().lower()
-    if userInput == key.UP:
-        sharkBaitExit()
-    elif userInput == key.LEFT:
-        balloonExit()
-    else:
-        print(KeyError + "Please enter a valid key option (UP or LEFT).")
+    keys_pressed = get_pygame_events()
+    for event in keys_pressed:
+        if event.type == pygame.KEYDOWN:
+            if event.key == K_UP:
+                sharkBaitExit()
+            elif event.key == K_LEFT:
+                balloonExit()
+            else:
+                print(KeyError + "Please enter a valid key option.")
 
 
 def sharkBaitExit():
     # Exit game
-    slowprint(
-        "He got you! You tried to get away but he's too fast."
-        + "You're dead.")
-    exit()
+    slowPrintExit(sharkBaitExitPrint)
 
 
 def balloonExit():
     # Exit game
-    slowprint(
-        "You swam up and out of sight!"
-        + emoji_choice.shell()
-        + "But oops! You accidentally swallowed a balloon"
-        + "You thought it was a jellyfish! Unlucky..."
-        + emoji_choice.jellyfish()
-        + "Let's hope that get's recycled out of your body"
-        + "or it will be fatal..")
-    exit()
+    slowPrintExit(balloonExitPrint)
 
 
 def oilSpill():
     # Continue to vesselStrikeExit
     slowprint(
         "There's been an oil spill affecting your favourite"
-        + emoji_choice.biohazard()
+        + emoji_choice.biohazard
         + "corals! You are going to have to rest by the"
-        + emoji_choice.reef()
+        + emoji_choice.reef
         + "mangroves instead. Take a five minute rest and get"
         + "back to swimming.")
     vesselStrikeExit()
@@ -247,190 +294,46 @@ def oilSpill():
 
 def vesselStrikeExit():
     # Exit game
-    slowprint(
-        "Poor you! A boat came to watch sealions near by your"
-        + "new favourite spot! the boat It's colided with a pod"
-        + "of seals. You haven't been able to reach the surface this time!"
-        + emoji_choice.seal())
-    exit()
+    slowPrintExit(vesselStrikeExitPrint)
 
 
 def introScene():
     # Make name recognised as global
     global name
-    name = input("Please enter your name: ")
+    name = input("Please enter your name: \n")
     slowprint(
         name + ", great. Now you have 4 directions to choose from."
-        + "Which way will you go next?")
-    userInput = input().lower()
-
-    # Based on option user selects, proceed to correct destination function
-    slowprint(
-        name + ", your options are on your keyboard."
-        + "Throughout this adventure, all you need to tap is:"
-        + "Up, Down, Left or Right"
-        + "And if you would like to escape anytime - hit escape!")
-    userInput = input().lower()
-    if userInput == key.UP:
-        gillnetRescue()
-    elif userInput == key.DOWN:
-        tangledExit()
-    elif userInput == key.LEFT:
-        oaxacaBeach()
-    elif userInput == key.RIGHT:
-        swimWithFriends()
-    else:
-        print(
-            KeyError + "Please enter a valid key option"
-            + "(UP/DOWN/LEFT/RIGHT)")
+        + " Your options are on your keyboard."
+        + " Throughout this adventure, all you need to tap is:"
+        + " Up, Down, Left or Right"
+        + " And if you would like to escape anytime - hit escape!"
+        + " Which way will you go next?"
+        + " Enter key")
+    keys_pressed = get_pygame_events()
+    for event in keys_pressed:
+        if event.type == pygame.KEYDOWN:
+            if event.key == KEY.UP:
+                gillnetRescue()
+            elif event.key == K_DOWN:
+                tangledExit()
+            elif event.key == K_LEFT:
+                oaxacaBeach()
+            elif event.key == K_RIGHT:
+                swimWithFriends()
+            else:
+                print(
+                    KeyError + "Please enter a valid key option"
+                    + "(UP/DOWN/LEFT/RIGHT)")
 
 
 if __name__ == "__main__":
     slowprint(
         "Welcome to the Save the Sea Turtle Game!"
         # ... [introductory text]
-        + "Ahoy! As an endangered sea turtle, you are peacefully riding"
-        + emoji_choice.whale()
+        + " Ahoy! As an endangered sea turtle, you are peacefully riding"
+        + emoji_choice.whale
         + "the Pacific Ocean. We are going to take you on an adventure!"
-        + emoji_choice.dolphin()
+        + emoji_choice.dolphin
         + "Watch out for the Great White Shark and other great terrors."
-        + emoji_choice.okay())
+        + emoji_choice.okay)
     main()
-
-
-
-
-emojis.py 
-
-
-
-    def lightblueheart_emoji(self):
-        return f"{self.lightblueheart}"
-
-
-    def whiteheart_emoji(self):
-        return f"{self.whiteheart}"
-
-
-    def handwave_emoji(self):
-        return f"{self.handwave}"
-
-
-    def okay(self):
-        return f"{self.okay}"
-
-
-    def clapping_emoji(self):
-        return f"{self.clapping}"
-
-
-    def seaturtle_emoji(self):
-        return f"{self.seaturtle}"
-
-
-    def wave_emoji(self):
-        return f"{self.wave}"
-
-
-    def dolphin_emoji(self):
-        return f"{self.dolphin}"
-
-
-    def tropicalfish_emoji(self):
-        return f"{self.tropicalfish}"
-
-
-    def blowfish_emoji(self):
-        return f"{self.blowfish}"
-
-
-    def shark(self):
-        return f"{self.shark}"
-
-
-    def octopus(self):
-        return f"{self.octopus}"
-
-
-    def shell(self):
-        return f"{self.shell}"
-
-
-    def reef(self):
-        return f"{self.reef}"
-
-
-    def jellyfish(self):
-        return f"{self.jellyfish}"
-
-
-    def lobster(self):
-        return f"{self.lobster}"
-
-
-    def seal(self):
-        return f"{self.seal}"
-
-
-    def squid(self):
-        return f"{self.squid}"
-
-
-    def egg(self):
-        return f"{self.egg}"
-
-
-    def vulture(self):
-        return f"{self.vulture}"
-
-
-    def crab(self):
-        return f"{self.crab}"
-
-
-    def buoy(self):
-        return f"{self.buoy}"
-
-
-    def motorboat(self):
-        return f"{self.motorboat}"
-
-
-    def compass(self):
-        return f"{self.compass}"
-
-
-    def divingmask(self):
-        return f"{self.divingmask}"
-
-
-    def e_up(self):
-        return f"{self.e_up}"
-
-
-    def e_down(self):
-        return f"{self.e_down}"
-
-
-    def e_right(self):
-        return f"{self.e_right}"
-
-
-    def e_left(self):
-        return f"{self.e_left}"
-
-
-    def biohazard(self):
-        return f"{self.biohazard}"
-
-
-    def mexico(self):
-        return f"{self.mexico}"
-
-
-    def pirateflag(self):
-        return f"{self.pirateflag}"
-
-
-    def skull(self):
-        return f"{self.skull}" 
