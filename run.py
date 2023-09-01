@@ -211,7 +211,7 @@ def vesselStrikeExit():
 def introScene():
     # Make name recognised as global
     global name
-    name = input("Please enter your name: ")
+    name = input("Please enter your name: \n")
     slowprint(
         name + ", great. Now you have 4 directions to choose from."
         + "Which way will you go next?")
