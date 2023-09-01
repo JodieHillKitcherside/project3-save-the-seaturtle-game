@@ -215,15 +215,12 @@ def introScene():
     name = input("Please enter your name: \n")
     slowprint(
         name + ", great. Now you have 4 directions to choose from."
-        + " Which way will you go next?")
-    userInput = input().lower()
-
-    # Based on option user selects, proceed to correct destination function
-    slowprint(
-        name + ", your options are on your keyboard."
+        + " Your options are on your keyboard."
         + " Throughout this adventure, all you need to tap is:"
         + " Up, Down, Left or Right"
-        + " And if you would like to escape anytime - hit escape!")
+        + " And if you would like to escape anytime - hit escape!"
+        + " Which way will you go next?"
+        + " Enter key")
     userInput = input().lower()
     if userInput == key.UP:
         gillnetRescue()
