@@ -53,6 +53,8 @@ Allowing the game to become a RPG would simplify the storyline and make this mor
 - Terminal identified a number of indentation errors - quickly resolved with human eye. 
 - Exit function would not work as parentheses included each individual function to call, fixed by calling main function, with all other functions inside. Thus, avoided repetition in code. Added a reusable function.
 - Import pygame, import os from OSMOD and import pynput would not provide the correct import of the keyborad needed to link user pressed keys and user input to the game. Instead, pyglet key has been imported. 
+- Emoji class use: All of attributes in the emojis.py file had the same names as methods, which conflicted and was 
+repeated code. Emojis.py has 1 class and calls the class in run.py and statements.py at the string ie. "+ emoji_choice.seaturtle".
 
 ### Unsolved Bugs
 
@@ -88,11 +90,6 @@ Invent Your Own Computer Games With Python - Al Sweigart
 https://www.geeksforgeeks.org/how-to-print-to-stderr-and-stdout-in-python/ - import sys 
 https://pyglet.readthedocs.io/en/latest/modules/window_key.html#module-pyglet.window.key - user input keys: tried pyglet/ keyboard, Tkinter * and a number of other failed installations, pyglet key worked even though advice for windows and using Mac
 https://www.geeksforgeeks.org/python-program-to-print-emojis/ - errors on unicode 
-your functions are defined directly in the emojis file, they're not methods of the Emoji class. If you want them to be methods of the class they need to be indented
-Oisin profile
-the __init__ fuction here is a method of the class as it's indented here
-all of your attributes have the same names as your methods, which will conflict
-repeated code
 
 ### Tutor/mentor suggestions
 
