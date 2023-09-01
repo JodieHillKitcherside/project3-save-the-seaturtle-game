@@ -1,4 +1,8 @@
-def balloonExitPrint = [
+"""
+Statements to excute from run.py slowPrintExit function
+"""
+
+balloonExitPrint = [
     "You swam up and out of sight!" + emoji_choice.shell
     + "But oops! You accidentally swallowed a balloon"
     + "You thought it was a jellyfish! Unlucky..."
@@ -8,7 +12,7 @@ def balloonExitPrint = [
 ]
 
 
-def tangledExitPrint = [
+tangledExitPrint = [
     "Bad storms mean that fishermen's nets are no longer drying"
     + "on the beach and made it into the water!"
     + emoji_choice.tropicalfish
@@ -17,13 +21,13 @@ def tangledExitPrint = [
 ]
 
 
-def sharkBaitExitPrint = [
+sharkBaitExitPrint = [
     "He got you! You tried to get away but he's too fast."
     + "You're dead."
 ]
 
 
-def vesselStrikeExitPrint = [
+vesselStrikeExitPrint = [
     "Poor you! A boat came to watch sealions near by your"
     + "new favourite spot! the boat It's colided with a pod"
     + "of seals. You haven't been able to reach the surface this time!"
@@ -31,13 +35,13 @@ def vesselStrikeExitPrint = [
 ]
 
 
-def beachPartExitPrint = [
+beachPartExitPrint = [
     "Blast! The people are startling you."
     + "There is a beach party. There's nowhere to lay!"
 ]
 
 
-def babiesSafePrint = [
+babiesSafePrint = [
     "Phew! You dug a deep nest and all the babies are safe!" +
     emoji_choice.whiteheart
     + "You tried so hard in the heat and wading through the thick sand."
@@ -47,7 +51,7 @@ def babiesSafePrint = [
 ]
 
 
-def fleeExitPrint = [
+fleeExitPrint = [
     "Vultures viciously circled and you fled back to the ocean!"
     + emoji_choice.wave +
     "You're so lucky! You made it back to ride the tide!"
@@ -56,7 +60,7 @@ def fleeExitPrint = [
 ]
 
 
-def rescueExitPrint = [
+rescueExitPrint = [
     "Yay! The rescue team are taking you to rehab, looks like your"
     + "injuries will be fixed and you are going back"
     + "to the open ocean!" + emoji_choice.squid
