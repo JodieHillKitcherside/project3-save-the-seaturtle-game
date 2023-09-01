@@ -1,3 +1,7 @@
+from emojis import Emoji
+
+emoji_choice = Emoji()
+
 """
 Statements to excute from run.py slowPrintExit function
 """
@@ -35,7 +39,7 @@ vesselStrikeExitPrint = [
 ]
 
 
-beachPartExitPrint = [
+beachPartyExitPrint = [
     "Blast! The people are startling you."
     + "There is a beach party. There's nowhere to lay!"
 ]

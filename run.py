@@ -15,7 +15,8 @@ from statements import (
     vesselStrikeExitPrint,
     beachPartyExitPrint,
     babiesSafePrint,
-    fleeExitPrint
+    fleeExitPrint,
+    rescueExitPrint
 )
 
 
@@ -214,15 +215,15 @@ def introScene():
     name = input("Please enter your name: \n")
     slowprint(
         name + ", great. Now you have 4 directions to choose from."
-        + "Which way will you go next?")
+        + " Which way will you go next?")
     userInput = input().lower()
 
     # Based on option user selects, proceed to correct destination function
     slowprint(
         name + ", your options are on your keyboard."
-        + "Throughout this adventure, all you need to tap is:"
-        + "Up, Down, Left or Right"
-        + "And if you would like to escape anytime - hit escape!")
+        + " Throughout this adventure, all you need to tap is:"
+        + " Up, Down, Left or Right"
+        + " And if you would like to escape anytime - hit escape!")
     userInput = input().lower()
     if userInput == key.UP:
         gillnetRescue()
@@ -242,7 +243,7 @@ if __name__ == "__main__":
     slowprint(
         "Welcome to the Save the Sea Turtle Game!"
         # ... [introductory text]
-        + "Ahoy! As an endangered sea turtle, you are peacefully riding"
+        + " Ahoy! As an endangered sea turtle, you are peacefully riding"
         + emoji_choice.whale
         + "the Pacific Ocean. We are going to take you on an adventure!"
         + emoji_choice.dolphin
