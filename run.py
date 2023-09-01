@@ -31,7 +31,7 @@ def main():
 def exit():
     # Exit function exits the game
     slowprint(
-        "GAME OVER" + name + skull.unicode() +
+        "GAME OVER" + name + skull +
         "Well done on getting that far. I'm sure you've worked out by now" +
         "that unfortunately sea turtles face many threats to their survival" +
         "and although some are natural - most are human threats." +

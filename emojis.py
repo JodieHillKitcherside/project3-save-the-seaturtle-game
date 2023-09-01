@@ -1,47 +1,49 @@
+from emoji import emojize
+
 """
 Creates instance of emoji
 """
 
 
 class Emoji:
-    def __init__(self, unicode):
-        self.unicode = unicode
+    def __init__(self):
+        self.lightblueheart = " \U0001F499\n"
+        self.whiteheart = " \U0001F90D \n"
+        self.handwave = " \U0001F44B \n"
+        self.okay = " \U0001F44C \n"
+        self.clapping = " \U0001F44F \n"
+        self.seaturtle = " \U0001F422 \n"
+        self.whale = " \U0001F433 \n"
+        self.dolphin = " \U0001F42C \n"
+        self.tropicalfish = " \U0001F420 \n"
+        self.blowfish = " \U0001F421 \n"
+        self.shark = " \U0001F988 \n"
+        self.octopus = " \U0001F988 \n"
+        self.shell = " \U0001F41A \n"
+        self.reef = " \U0001FAB8 \n"
+        self.jellyfish = " \U0001FABC \n"
+        self.lobster = " \U0001F99E \n"
+        self.seal = " \U0001F9AD \n"
+        self.squid = " \U0001F991 \n"
+        self.crab = " \U0001F980 \n"
+        self.egg = " \U0001F95A \n"
+        self.vulture = " \U0001F985 \n"
+        self.buoy = " \U0001F6DF \n"
+        self.motorboat = " \U0001F6E5 \n"
+        self.divingmask = " \U0001F93F \n"
+        self.compass = " \U0001F9ED \n"
+        self.e_up = " \U00002B06 \n"
+        self.e_down = " \U00002B07 \n"
+        self.e_right = " \U000027A1 \n"
+        self.e_left = " \U00002B05 \n"
+        self.biohazard = " \U00002623 \n"
+        self.mexico = " \U0001F1F2 \n"
+        self.wave = " \U0001F30A \n"
+        self.pirateflag = " \U0001F3F4 \n
+        self.skull = " \U0001F480 \n"
 
 
-lightblueheart = Emoji(" \U0001F499\n")
-whiteheart = Emoji(" \U0001F90D \n")
-handwave = Emoji(" \U0001F44B \n")
-okay = Emoji(" \U0001F44C \n")
-clapping = Emoji(" \U0001F44F \n")
-seaturtle = Emoji(" \U0001F422 \n")
-whale = Emoji(" \U0001F433 \n")
-dolphin = Emoji(" \U0001F42C \n")
-tropicalfish = Emoji(" \U0001F420 \n")
-blowfish = Emoji(" \U0001F421 \n")
-shark = Emoji(" \U0001F988 \n")
-octopus = Emoji(" \U0001F988 \n")
-shell = Emoji(" \U0001F41A \n")
-reef = Emoji(" \U0001FAB8 \n")
-jellyfish = Emoji(" \U0001FABC \n")
-lobster = Emoji(" \U0001F99E \n")
-seal = Emoji(" \U0001F9AD \n")
-squid = Emoji(" \U0001F991 \n")
-crab = Emoji(" \U0001F980 \n")
-egg = Emoji(" \U0001F95A \n")
-vulture = Emoji(" \U0001F985 \n")
-buoy = Emoji(" \U0001F6DF \n")
-motorboat = Emoji(" \U0001F6E5 \n")
-divingmask = Emoji(" \U0001F93F \n")
-compass = Emoji(" \U0001F9ED \n")
-e_up = Emoji(" \U00002B06 \n")
-e_down = Emoji(" \U00002B07 \n")
-e_right = Emoji(" \U000027A1 \n")
-e_left = Emoji(" \U00002B05 \n")
-biohazard = Emoji(" \U00002623 \n")
-mexico = Emoji(" \U0001F1F2 \n")
-wave = Emoji(" \U0001F30A \n")
-pirateflag = Emoji(" \U0001F3F4 \n")
-skull = Emoji(" \U0001F480 \n")
+
 
 
 """Emoji()
