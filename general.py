@@ -1,6 +1,11 @@
 import sys
 import time
+import pygame
 from pygame.locals import *
+from run import main
+
+
+pygame.init()
 
 
 def slowprint(all_strings):
@@ -14,18 +19,18 @@ def slowprint(all_strings):
 def escape():
     # Implementing a hotkey
     for event in pygame.event.get():
-            if event.type == QUIT:
-                return
-            elif event.type == KEYDOWN:
-                if event.key == K_ESCAPE:
-                    main()
+        if event.type == pygame.QUIT:
+            return main()
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                main()
 
 
 def check_user_input(input_str):
     # Validates all user input
     # Prints prompt if blank
     for event in pygame.event.get():
-            if event.type == "":
-                print("Please enter your input")
-            else:
-                None
+        if event.type == "":
+            print("Please enter your input")
+        else:
+            None

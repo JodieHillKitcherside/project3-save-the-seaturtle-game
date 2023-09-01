@@ -75,6 +75,12 @@ repeated code. Emojis.py has 1 class and calls the class in run.py and statement
 
 ### Unsolved Bugs
 
+https://stackoverflow.com/questions/7053971/python-trouble-using-escape-key-to-exit
+https://stackoverflow.com/questions/25494726/how-to-use-pygame-keydown-to-execute-something-every-time-through-a-loop-while-t
+https://stackoverflow.com/questions/56844378/pylint-no-member-issue-but-code-still-works-vscode
+https://github.com/Rabbid76/PyGameExamplesAndAnswers/blob/master/documentation/pygame/pygame_keys_and_keyboard_event.md
+
+
 ## Deployment
 
 The project was deployed using Code Institute's mock terminal for Heroku.

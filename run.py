@@ -1,6 +1,6 @@
 import sys
 import time
-import pygame 
+import pygame
 import random
 from pygame.locals import *
 import pyfiglet
@@ -21,6 +21,8 @@ from statements import (
     rescueExitPrint
 )
 
+
+pygame.init()
 
 """
 Use pyfiglet module
@@ -77,9 +79,9 @@ def oaxacaBeach():
     keys_pressed = get_pygame_events()
     for event in keys_pressed:
         if event.type == pygame.KEYDOWN:
-            if event.key == K_LEFT:
+            if event.key == pygame.K_LEFT:
                 vultureLurk()
-            if event.key == K_DOWN:
+            if event.key == pygame.K_DOWN:
                 disoriented()
             else:
                 print(KeyError + "Please enter a valid key option.")
