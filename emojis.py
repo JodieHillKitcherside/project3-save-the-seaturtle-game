@@ -39,4 +39,3 @@ class Emoji:
         self.wave = " \U0001F30A \n"
         self.pirateflag = " \U0001F3F4 \n"
         self.skull = " \U0001F480 \n"
-        
