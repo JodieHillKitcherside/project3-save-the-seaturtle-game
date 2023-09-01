@@ -40,19 +40,36 @@ For example :
 Which way would you like to go next?" 
 Allowing the game to become a RPG would simplify the storyline and make this more unniversal for younger children. 
 
+# Addtional files to support run.py
+- General.py hosts 'global' functions such as the slowprint: for all text to add to user experience; escape key:  allows the user to escape the game and return to the intro scene, and the check user input: which checks if input is blank and provides a prompt to user. 
+- Emojis.py hosts the Emoji() class with all emoji unicodes, this is then sourced in run.py and used as part of a string. 
+- Statements.py hosts the statements for each function called in run.py that follows the reusable function 'slowPrintExit(). This was created to simplify code and cut repetition. 
+
+# Frameworks and libraries used 
+- Sys used for slowprint() on general.py
+- Time used for slowprint() on general.py
+- Pyglet import key for key arrows 
+- Pyfiglet for termainal header - ASCII art 
+- Emojis import Emoji - for emojis.py, run.py and statements.py
+
 ## Design
+
+Index.html displays a background image of a vivid colourful ocean bed. White headings and footer have been styled to stand out in the foreground. 
 
 ### Validator Testing
 
-## Examples:
+## Examples
 
 ### PEP8
 
 ### Solved Bugs
 
 - Terminal identified a number of indentation errors - quickly resolved with human eye. 
+
 - Exit function would not work as parentheses included each individual function to call, fixed by calling main function, with all other functions inside. Thus, avoided repetition in code. Added a reusable function.
-- Import pygame, import os from OSMOD and import pynput would not provide the correct import of the keyborad needed to link user pressed keys and user input to the game. Instead, pyglet key has been imported. 
+
+- Import pygame, import os from OSMOD , import pynput and import Tkinter * would not provide the correct import of the keyboard needed to link user pressed keys and user input to the game. Instead, pyglet key has been imported. 
+
 - Emoji class use: All of attributes in the emojis.py file had the same names as methods, which conflicted and was 
 repeated code. Emojis.py has 1 class and calls the class in run.py and statements.py at the string ie. "+ emoji_choice.seaturtle".
 
@@ -88,10 +105,10 @@ Invent Your Own Computer Games With Python - Al Sweigart
 - 5 : Dragon Realm 
 
 https://www.geeksforgeeks.org/how-to-print-to-stderr-and-stdout-in-python/ - import sys 
-https://pyglet.readthedocs.io/en/latest/modules/window_key.html#module-pyglet.window.key - user input keys: tried pyglet/ keyboard, Tkinter * and a number of other failed installations, pyglet key worked even though advice for windows and using Mac
 https://www.geeksforgeeks.org/python-program-to-print-emojis/ - errors on unicode 
 
 ### Tutor/mentor suggestions
+Oisin suggested the reduction of repeated code to resolve the Emoji() issue. 
 
 ### Inspiration and content 
 https://www.iucnredlist.org/species/11534/3292503

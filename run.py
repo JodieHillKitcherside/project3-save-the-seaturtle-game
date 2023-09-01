@@ -1,6 +1,8 @@
 import sys
 import time
-from pyglet import key
+import pygame 
+import random
+from pygame.locals import *
 import pyfiglet
 from emojis import Emoji
 from general import (
@@ -56,6 +58,12 @@ def slowPrintExit(all_strings):
     exit()
 
 
+def get_pygame_events():
+    # Defines function to check for events
+    pygame_events = pygame.event.get()
+    return pygame_events
+
+
 def oaxacaBeach():
     # Offer user right or down keys to continue game
     # Based on right, proceed to vultureLurk
@@ -66,13 +74,15 @@ def oaxacaBeach():
         + emoji_choice.egg
         + "to Oaxaca Beach! Lets see if you can protect"
         "them all!" + emoji_choice.mexico)
-    userInput = input().lower()
-    if userInput == key.LEFT:
-        vultureLurk()
-    elif userInput == key.DOWN:
-        disoriented()
-    else:
-        print(KeyError + "Please enter a valid key option (LEFT or DOWN).")
+    keys_pressed = get_pygame_events()
+    for event in keys_pressed:
+        if event.type == pygame.KEYDOWN:
+            if event.key == K_LEFT:
+                vultureLurk()
+            if event.key == K_DOWN:
+                disoriented()
+            else:
+                print(KeyError + "Please enter a valid key option.")
 
 
 def vultureLurk():
@@ -83,13 +93,15 @@ def vultureLurk():
         "Watch out! Vultures are out to attack!" +
         emoji_choice.vulture
         + name + ", select your next option: Up or Right!")
-    userInput = input().lower()
-    if userInput == key.UP:
-        fleeExit()
-    elif userInput == key.RIGHT:
-        babiesSafe()
-    else:
-        print(KeyError + "Please enter a valid key option (UP or RIGHT).")
+    keys_pressed = get_pygame_events()
+    for event in keys_pressed:
+        if event.type == pygame.KEYDOWN:
+            if event.key == K_UP:
+                fleeExit()
+            elif event.key == K_RIGHT:
+                babiesSafe()
+            else:
+                print(KeyError + "Please enter a valid key option.")
     vultureLurk()
 
 
@@ -155,13 +167,15 @@ def swimWithFriends():
         + emoji_choice.crab
         + "Which way will you go?"
         "Enter your option: Up or Left")
-    userInput = input().lower()
-    if userInput == key.UP:
-        greatWhite()
-    elif userInput == key.LEFT:
-        oilSpill()
-    else:
-        print(KeyError + "Please enter a valid key option (UP or LEFT).")
+    keys_pressed = get_pygame_events()
+    for event in keys_pressed:
+        if event.type == pygame.KEYDOWN:
+            if event.key == K.RIGHT:
+                greatWhite()
+        elif event.key == K_LEFT:
+                oilSpill()
+        else:
+            print(KeyError + "Please enter a valid key option.")
 
 
 def greatWhite():
@@ -173,13 +187,15 @@ def greatWhite():
         + emoji_choice.shark
         + name
         + ", select your next option: Up or Left!")
-    userInput = input().lower()
-    if userInput == key.UP:
-        sharkBaitExit()
-    elif userInput == key.LEFT:
-        balloonExit()
-    else:
-        print(KeyError + "Please enter a valid key option (UP or LEFT).")
+    keys_pressed = get_pygame_events()
+    for event in keys_pressed:
+        if event.type == pygame.KEYDOWN:
+            if event.key == K_UP:
+                sharkBaitExit()
+            elif event.key == K_LEFT:
+                balloonExit()
+            else:
+                print(KeyError + "Please enter a valid key option.")
 
 
 def sharkBaitExit():
@@ -221,19 +237,21 @@ def introScene():
         + " And if you would like to escape anytime - hit escape!"
         + " Which way will you go next?"
         + " Enter key")
-    userInput = input().lower()
-    if userInput == key.UP:
-        gillnetRescue()
-    elif userInput == key.DOWN:
-        tangledExit()
-    elif userInput == key.LEFT:
-        oaxacaBeach()
-    elif userInput == key.RIGHT:
-        swimWithFriends()
-    else:
-        print(
-            KeyError + "Please enter a valid key option"
-            + "(UP/DOWN/LEFT/RIGHT)")
+    keys_pressed = get_pygame_events()
+    for event in keys_pressed:
+        if event.type == pygame.KEYDOWN:
+            if event.key == KEY.UP:
+                gillnetRescue()
+            elif event.key == K_DOWN:
+                tangledExit()
+            elif event.key == K_LEFT:
+                oaxacaBeach()
+            elif event.key == K_RIGHT:
+                swimWithFriends()
+            else:
+                print(
+                    KeyError + "Please enter a valid key option"
+                    + "(UP/DOWN/LEFT/RIGHT)")
 
 
 if __name__ == "__main__":
