@@ -22,7 +22,3 @@ body {
     image-rendering: auto;
     image-rendering: -moz-crisp-edges;
 }
-
-#footer a {
-    text-decoration: none;
-}
