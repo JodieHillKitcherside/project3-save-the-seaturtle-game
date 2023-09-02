@@ -136,7 +136,7 @@ def disoriented():
 
 def beachPartyExit():
     # Exit game
-    slowPrintExit(beachPartyExit)
+    slowPrintExit(beachPartyExitPrint)
 
 
 def gillnetRescue():

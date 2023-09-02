@@ -58,13 +58,13 @@ babiesSafePrint = [
 fleeExitPrint = [
     "Vultures viciously circled and you fled back to the ocean!"
     " You're so lucky! You made it back to ride the tide!"
-    + "You can try again tomorrow."
+    + " You can try again tomorrow."
     + emoji_choice.wave + emoji_choice.lightblueheart
 ]
 
 
 rescueExitPrint = [
     "Yay! The rescue team are taking you to rehab, looks like your"
-    + "injuries will be fixed and you are going back"
-    + "to the open ocean!" + emoji_choice.squid
+    + " injuries will be fixed and you are going back"
+    + " to the open ocean!" + emoji_choice.squid
 ]
