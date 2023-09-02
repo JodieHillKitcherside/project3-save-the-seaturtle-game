@@ -15,42 +15,43 @@
 <!-- This is the header containing logo and nav : -->
 
 <body>
-    <header style="font-family: 'Lilita One', cursive;
-        font-family: 'Playfair Display', serif;
-        font-family: 'Playfair Display SC', serif;
-        font-family: 'Roboto Condensed', sans-serif; color: white;">
+    <header>
         <h1>Save the Sea Turtle!</h2>
-        <h2>An Extinction Game, by Jodie Hill-Kitcherside</h1>
+        <h2>by Jodie Hill-Kitcherside</h1>
     </header>
     <br>
 <!-- This is the main : -->
-    <div id="background-image">
-        <main>
-            <button onclick="window.location.reload()">Run Program</button>
-            <div id="terminal"></div>
+    <main>
+<!-- background image -->        
+        <div>
+            <a><img id="background-image" src="https://stock.adobe.com/uk/images/a-photorealistic-underwater-backdrop-capturing-the-intricate-patterns-and-vibrant-colors-of-a-coral-garden-showcasing-a-diverse-range-of-coral-species-and-the-abundant-marine-life-generative-ai/619083064"
+                alt="Vivid underwater coral garden" />
+            </a>
+        </div>
+        <button onclick="window.location.reload()">Run Program</button>
+        <div id="terminal"></div>
 
-            <script>
-                var term = new Terminal({
-                    cols: 80,
-                    rows: 24
-                });
-                term.open(document.getElementById('terminal'));
-                term.writeln('Running startup command: python3 run.py');
-                term.writeln('');
+        <script>
+            var term = new Terminal({
+                cols: 80,
+                rows: 24
+            });
+            term.open(document.getElementById('terminal'));
+            term.writeln('Running startup command: python3 run.py');
+            term.writeln('');
 
-                var ws = new WebSocket(location.protocol.replace('http', 'ws') + '//' + location.hostname + (location.port ? (
-                    ':' + location.port) : '') + '/');
+            var ws = new WebSocket(location.protocol.replace('http', 'ws') + '//' + location.hostname + (location.port ? (
+                ':' + location.port) : '') + '/');
 
-                ws.onopen = function () {
-                    new attach.attach(term, ws);
-                };
+            ws.onopen = function () {
+                new attach.attach(term, ws);
+            };
 
-                ws.onerror = function (e) {
-                    console.log(e);
-                };
-                // Set focus in the terminal
-                document.getElementsByClassName("xterm-helper-textarea")[0].focus();
-            </script>
-        </main>
-    </div>
+            ws.onerror = function (e) {
+                console.log(e);
+            };
+            // Set focus in the terminal
+            document.getElementsByClassName("xterm-helper-textarea")[0].focus();
+        </script>
+    </main>
 </body>
