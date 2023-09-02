@@ -56,39 +56,31 @@ Most next steps as you progress throughout the quiz provide a question with two 
 ## Design
 
 Index.html displays a background image of a vivid colourful ocean bed. White headings and footer have been styled to stand out in the foreground. 
+Insert full heroku picture here. 
 
 ### Validator Testing
 
-## Examples
+This project has been extensively tested.
+
+All possible user input points have been tested to ensure error handling has been taken care of and they call the correct function.
+![Owner testing](documents/testing/owner-testing.jpg) 
 
 ### PEP8
 
+There are no PEP8 errors.
+
+![PEP8 -run.py](documents/screenshots/pep8/run-pep8.jpg ) 
+![PEP8 - statemenets.py](documents/screenshots/pep8/statements-pep8.jpg) 
+![PEP8 - emojis.py](documents/screenshots/pep8/emojis-pep8.jpg) 
+
+Pylinter checks:
+![Owner testing](documents/testing/pylinter-checks.jpg) 
+
 ### Solved Bugs
 
-- Terminal identified a number of indentation errors - quickly resolved with human eye. 
+![Bugs] (documents/bugs/bugs.jpg)
 
-- Exit function would not work as parentheses included each individual function to call, fixed by calling main function, with all other functions inside. Thus, avoided repetition in code. Added a reusable function.
-
-- Emoji class use: All of attributes in the emojis.py file had the same names as methods, which conflicted and was 
-repeated code. Emojis.py has 
-1 class and calls the class in run.py and statements.py at the string ie. "+ emoji_choice.seaturtle".
-
-- User input: User input was appearing before the main intro, being called as a global variable and therefore have locally stored the named variable in each story statement.
-
-- Keyboard arrows:
-1. Goal: Download a module to support the keyboard arrows Up, Down, Right, Left. Solely for user experience and ease throughout the game. 
-2. Actions: Imported keyboard, pyglet, pygame, os from OSMOD, pynput and Tkinter *; all separately. None of these worked and displayed many errors. Time spent trying to correct these errros is largely time lost. As the site runs solely on a terminal, the graphical inputs weren't supported. 
-3. Back to basics: Instead have reverted to alphanumeric input only and described keys 'u' as Up for example. 
-4. Further issues: 
-- Import error - script running as root; Backend error suggesting 'must use a root' whilst using the library on Linux. Based on answers from ChatGBT, installed a root with myenv in the backend files alongisde main files. 
-- After looking closely to the traceback message, identifieid the source error: 'event = keyboard.read_event()  # Capture a keyboard event' (a line of code that hadn't been removed after several other testing tried in (2) above.)
-- Result: Running 'if keyboard.is_pressed("u")' instead. 
-- Still errors with keyboard: ImportError: You must be root to use this library on linux. Probably due to using Mac - https://stackabuse.com/guide-to-pythons-keyboard-module/. Then showed an't open file 'my_script.py': [Errno 2] No such file or directory. 
-- Result: Completely uninstalled keyboard and reverted to basic user input. 
-
-Keys now look like:
-        "if intro_input == "u":
-            gillnetRescue()"
+![Extensive Bugs](documents/bugs/key-arrows.jpg) 
 
 ### Unsolved Bugs
 
@@ -123,11 +115,12 @@ Python Tricks The Book - Dan Bader
 Invent Your Own Computer Games With Python - Al Sweigart 
 - 5 : Dragon Realm 
 
-https://www.geeksforgeeks.org/how-to-print-to-stderr-and-stdout-in-python/ - import sys 
 https://www.geeksforgeeks.org/python-program-to-print-emojis/ - errors on unicode 
 
 ### Tutor/mentor suggestions
-Oisin suggested the reduction of repeated code to resolve the Emoji() issue. 
+
+- Tutor Oisin suggested the reduction of repeated code to resolve the Emoji() issue. 
+- Tutor Sean suggested a minor change for the beachPartyExitPrint() issue. After days of testing and rewriting, needed someone else's eyes even for such a basic mistake!
 
 ### Inspiration and content 
 https://www.iucnredlist.org/species/11534/3292503

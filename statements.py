@@ -7,7 +7,7 @@ Statements to excute from run.py slowPrintExit function
 """
 
 balloonExitPrint = [
-    "You swam up and out of sight!" 
+    "You swam up and out of sight!"
     + " But oops! You accidentally swallowed a balloon"
     + " You thought it was a jellyfish! Unlucky..."
     + " Let's hope that get's recycled out of your body"
@@ -48,10 +48,10 @@ beachPartyExitPrint = [
 
 
 babiesSafePrint = [
-    "Phew! You dug a deep nest and all the babies are safe!" 
+    "Phew! You dug a deep nest and all the babies are safe!"
     + "You tried so hard in the heat and wading through the thick sand."
     + "Amazing, you have 100 baby turtle eggs protected!"
-    + emoji_choice.whiteheart + emoji_choice.clapping 
+    + emoji_choice.whiteheart + emoji_choice.clapping
 ]
 
 

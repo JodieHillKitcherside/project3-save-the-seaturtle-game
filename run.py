@@ -72,8 +72,8 @@ def oaxacaBeach():
     # Based on down, proceed to disoriented
     slowprint(
         "Wow mama! You have many eggs to lay, you've" +
-        " ended up swimming to Oaxaca Beach!" 
-        " Lets see if you can protect them all!" 
+        " ended up swimming to Oaxaca Beach!"
+        " Lets see if you can protect them all!"
         + emoji_choice.egg
         + " Select your next option:"
         + " Choose either 'r'" + emoji_choice.e_right
@@ -95,7 +95,7 @@ def vultureLurk():
     # Based on up, proceed to fleeExit
     # Based on right, proceed to babiesSafe
     slowprint(
-        "Watch out! Vultures are out to attack!" 
+        "Watch out! Vultures are out to attack!"
         + emoji_choice.vulture
         + name + ", select your next option:"
         + " Choose either 'u'" + emoji_choice.e_up
@@ -244,9 +244,9 @@ def introScene():
         + " Throughout this adventure, all you need to tap is:"
         + " 'u' button for Up, 'd' button for Down, 'l' button for Left"
         + " or 'r' button for Right - then hit Enter"
-        + emoji_choice.e_up 
+        + emoji_choice.e_up
         + " Which way will you go next?")
-    while True: 
+    while True:
         intro_input = input(" Please choose your option:\n")
         intro_answer = intro_input.strip().lower()
         if intro_input == "u":
@@ -258,8 +258,7 @@ def introScene():
         elif intro_input == "l":
             swimWithFriends()
         else:
-            print("Please enter a valid key option"
-                + "(lowercase only - u/d/l/r)")
+            print("Please enter a valid key option (lowercase only - u/d/l/r)")
     return intro_answer
 
 
@@ -270,5 +269,5 @@ if __name__ == "__main__":
         + " Ahoy! As an endangered sea turtle, you are peacefully riding"
         + " the Pacific Ocean. We are going to take you on an adventure!"
         + " Watch out for the Great White Shark and other great terrors."
-        + emoji_choice.whale + emoji_choice.dolphin + emoji_choice.okay) 
+        + emoji_choice.whale + emoji_choice.dolphin + emoji_choice.okay)
     main()
