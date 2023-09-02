@@ -1,0 +1,32 @@
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    vertical-align: middle;
+    font-family: 'Lilita One', cursive;
+        font-family: 'Playfair Display', serif;
+        font-family: 'Playfair Display SC', serif;
+        font-family: 'Roboto Condensed', sans-serif;
+}
+
+#background-image {
+    background-image: url("https://stock.adobe.com/uk/images/a-photorealistic-underwater-backdrop-capturing-the-intricate-patterns-and-vibrant-colors-of-a-coral-garden-showcasing-a-diverse-range-of-coral-species-and-the-abundant-marine-life-generative-ai/619083064");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    image-rendering: auto;
+    image-rendering: -moz-crisp-edges;
+}
+
+#footer {
+    display: flex;
+}
+
+footer a {
+    text-decoration: none;
+}
