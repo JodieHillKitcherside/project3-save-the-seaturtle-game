@@ -72,9 +72,9 @@ def oaxacaBeach():
     # Based on down, proceed to disoriented
     slowprint(
         "Wow mama! You have many eggs to lay, you've" +
-        "ended up swimming to Oaxaca Beach!" 
+        " ended up swimming to Oaxaca Beach!" 
         " Lets see if you can protect them all!" 
-        + emoji_choice.mexico + emoji_choice.egg
+        + emoji_choice.egg
         + " Select your next option:"
         + " Choose either 'l'" + emoji_choice.e_left
         + " or choose 'd'" + emoji_choice.e_down)
@@ -103,7 +103,7 @@ def vultureLurk():
     while True:
         vulture_input = input(" Please choose your option:\n")
         vulture_answer = vulture_input.strip().lower()
-        if vuluture_input == "u":
+        if vulture_input == "u":
             fleeExit()
         elif vulture_input == "r":
             babiesSafe()
@@ -167,7 +167,7 @@ def swimWithFriends():
     slowprint(
         "Looks like you've found some friends! you are swimming around"
         + " kelp, little fishes and terrible claw lobsters."
-        + " Woah!There is lots of food here!"
+        + " Woah! There is lots of food here!"
         + emoji_choice.crab + emoji_choice.jellyfish
         + emoji_choice.lobster
         + " Which way will you go?"

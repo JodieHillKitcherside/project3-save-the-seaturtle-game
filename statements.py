@@ -8,19 +8,19 @@ Statements to excute from run.py slowPrintExit function
 
 balloonExitPrint = [
     "You swam up and out of sight!" 
-    + "But oops! You accidentally swallowed a balloon"
-    + "You thought it was a jellyfish! Unlucky..."
-    + "Let's hope that get's recycled out of your body"
-    + "or it will be fatal.."
+    + " But oops! You accidentally swallowed a balloon"
+    + " You thought it was a jellyfish! Unlucky..."
+    + " Let's hope that get's recycled out of your body"
+    + " or it will be fatal.."
     + emoji_choice.jellyfish + emoji_choice.shell
 ]
 
 
 tangledExitPrint = [
     "Bad storms mean that fishermen's nets are no longer drying"
-    + "on the beach and made it into the water!"
-    + "Oops, you got tangled. You are on your"
-    " own in the deep ocean and nobody can help this time! :("
+    + " on the beach and made it into the water!"
+    + " Oops, you got tangled. You are on your"
+    + " own in the deep ocean and nobody can help this time! :("
     + emoji_choice.tropicalfish
 ]
 
@@ -57,7 +57,7 @@ babiesSafePrint = [
 
 fleeExitPrint = [
     "Vultures viciously circled and you fled back to the ocean!"
-    "You're so lucky! You made it back to ride the tide!"
+    " You're so lucky! You made it back to ride the tide!"
     + "You can try again tomorrow."
     + emoji_choice.wave + emoji_choice.lightblueheart
 ]
