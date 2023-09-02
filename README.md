@@ -76,15 +76,20 @@ Index.html displays a background image of a vivid colourful ocean bed. White hea
 - Emoji class use: All of attributes in the emojis.py file had the same names as methods, which conflicted and was 
 repeated code. Emojis.py has 1 class and calls the class in run.py and statements.py at the string ie. "+ emoji_choice.seaturtle".
 
+- Keyboard arrows:
+1. Goal: Download a module to support the keyboard arrows Up, Down, Right, Left. Solely for user experience and ease throughout the game. 
+2. Actions: Imported keyboard, pyglet, pygame, os from OSMOD, pynput and Tkinter *; all separately. None of these worked and displayed many errors. Time spent trying to correct these errros is largely time lost. As the site runs solely on a terminal, the graphical inputs weren't supported. 
+3. Back to basics: Instead have reverted to alphanumeric input only and described keys 'u' as Up for example. 
+4. Further issues: 
+- Import error - script running as root; Backend error suggesting 'must use a root' whilst using the library on Linux. Based on answers from ChatGBT, installed a root with myenv in the backend files alongisde main files. 
+- After looking closely to the traceback message, identifieid the source error: 'event = keyboard.read_event()  # Capture a keyboard event' (a line of code that hadn't been removed after several other testing tried in (2) above.)
+- Result: Running 'if keyboard.is_pressed("u") == ' instead. 
+
+
+
 ### Unsolved Bugs
 
-Key arrows:
 
-- Imported keyboard, pyglet, pygame, os from OSMOD, pynput and Tkinter *; all separately to try to import key arrows for use in a game. As the site runs solely on a terminal, the graphical inputs weren't supported. 
-- Instead have reverted to alphanumeric input only and described keys 'u' as Up for example. 
-
-Import error - script running as root:
-- Backend error suggesting that I must use a root whilst using the library on Linux. Have installed a root with myenv.
 
 https://stackoverflow.com/questions/7053971/python-trouble-using-escape-key-to-exit
 https://stackoverflow.com/questions/25494726/how-to-use-pygame-keydown-to-execute-something-every-time-through-a-loop-while-t

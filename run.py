@@ -23,9 +23,6 @@ def slowprint(all_strings):
         time.sleep(1/17)
 
 
-event = keyboard.read_event()  # Capture a keyboard event
-
-
 def escape():
     # Implementing a hotkey
     if event.name == 'esc':
@@ -91,9 +88,9 @@ def oaxacaBeach():
         + " Select your next option:"
         + " Choose either 'l'" + emoji_choice.e_left
         + " or choose 'd'" + emoji_choice.e_down)
-    if event.name == 'l':
+    if keyboard.is_pressed("l"):
         vultureLurk()
-    elif event.name == 'd':
+    elif keyboard.is_pressed("d")::
         disoriented()
     else:
         print(KeyError + "Please enter a valid key option.")
@@ -109,9 +106,9 @@ def vultureLurk():
         + name + ", select your next option:"
         + " Choose either 'u'" + emoji_choice.e_up
         + " or choose 'r'" + emoji_choice.e_right)
-    if event.name == 'u':
+    if keyboard.is_pressed("u"):
         fleeExit()
-    elif event.name == 'r':
+    elif keyboard.is_pressed("r"):
         babiesSafe()
     else:
         print(KeyError + "Please enter a valid key option.")
@@ -181,9 +178,9 @@ def swimWithFriends():
         + "Which way will you go?"
         + " Enter your option: 'u'" + emoji_choice.e_up
         + " or 'l'" + emoji_choice.e_left)
-    if event.name == 'u':
+    if keyboard.is_pressed("u"):
         greatWhite()
-    elif event.name == 'l;':
+    elif keyboard.is_pressed("l"):
         oilSpill()
     else:
         print(KeyError + "Please enter a valid key option.")
@@ -199,9 +196,9 @@ def greatWhite():
         + name
         + ", select your next option: 'u'" + emoji_choice.e_up
         + " or 'l'" + emoji_choice.e_left)
-    if event.key == 'u':
+    if keyboard.is_pressed("u"):
         sharkBaitExit()
-    elif event.key == 'l':
+    elif keyboard.is_pressed("l"):
         balloonExit()
     else:
         print(KeyError + "Please enter a valid key option.")
@@ -247,18 +244,18 @@ def introScene():
         + " And if you would like to escape anytime - hit escape!"
         + " Which way will you go next?"
         + " Enter key")
-    if event.name == 'u':
+    if keyboard.is_pressed("u"):
         gillnetRescue()
-    elif event.name == 'd':
+    elif keyboard.is_pressed("d"):
         tangledExit()
-    elif event.name == 'l':
+    elif keyboard.is_pressed("l")::
         oaxacaBeach()
-    elif event.name == 'r':
+    elif keyboard.is_pressed("r"):
         swimWithFriends()
     else:
         print(
             KeyError + "Please enter a valid key option"
-            + "(u/d/l/r)")
+            + "(lowercase only - u/d/l/r)")
 
 
 if __name__ == "__main__":
