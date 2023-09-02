@@ -27,7 +27,6 @@ This is a basic structure plan for the code, mapping out the necessary functions
 
 ![Storyboard Flowchart](documents/screenshots/storyline/storyline-beach-exit.jpg)
 ![Storyboard Flowchart](documents/screenshots/storyline/storyline-shark-exit.jpg)
-![Storyboard Flowchart](documents/screenshots/planning/planning_storyboard.png)
 
 
 ## Existing Features
