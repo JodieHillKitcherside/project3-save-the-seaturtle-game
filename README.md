@@ -36,20 +36,15 @@ Most next steps as you progress throughout the quiz provide a question with two 
 
 ## Features left to implement
 
-- Key option 'back', to alow the user to go back and try other options. 
-
-The text-based game could be further developed with images and a more detailed storyline, as with an RPG, like many other nintendo games (Super Mario, Animal Crossing, Legend of Zelda) ideal for the nintendo switch. 
-In order to enable this, the storyline would need to be simplified, add mutliple characters and update the functionality. Main character would be identified rather than asking a user to assign a name, and the story would start by introducing this character.
-
-For example : 
-"Ahoy Crush! I like the way you're riding the waves! Dude, it's time for an adventure! Your aim is to keep safe and avoid being eaten by the Great White Shark and any other hidden terrors - so watch out.
-Which way would you like to go next?" 
-Allowing the game to become a RPG would simplify the storyline and make this more unniversal for younger children. 
+- Key arrows (Up/Down/Right/Left).
+- Key options 'backspace' 'esc' and 'quit', to alow the user to go back and try other options. 
+- Deeper storyline, more options other than limited death, allowing th user to understand more about the life of that species. 
+- Other endangered species games, allowing use to choose which animal to play. 
+- Basis for a cool RPG for children and young adults to play for in years to come, when several species have become extinct. For example, we could already create learning around the lift of recently extinct animals: Northern White Rhinocerous, Baiji or Pyrenean Ibex. As many games today are action-adventures and story based, it would be cool for something like this to team up with WWF or the National Geographic for children's fun and learning. 
 
 # Addtional files to support run.py
-- General.py hosts 'global' functions such as the slowprint: for all text to add to user experience; escape key:  allows the user to escape the game and return to the intro scene, and the check user input: which checks if input is blank and provides a prompt to user. 
 - Emojis.py hosts the Emoji() class with all emoji unicodes, this is then sourced in run.py and used as part of a string. 
-- Statements.py hosts the statements for each function called in run.py that follows the reusable function 'slowPrintExit(). This was created to simplify code and cut repetition. 
+- Statements.py hosts the statements for each function called in run.py that follows the reusable function 'slowPrintExit()'. This was created to simplify code and cut repetition. 
 
 # Frameworks, libraries and modules used 
 - Sys used for slowprint() 
@@ -90,11 +85,13 @@ repeated code. Emojis.py has
 - Still errors with keyboard: ImportError: You must be root to use this library on linux. Probably due to using Mac - https://stackabuse.com/guide-to-pythons-keyboard-module/. Then showed an't open file 'my_script.py': [Errno 2] No such file or directory. 
 - Result: Completely uninstalled keyboard and reverted to basic user input. 
 
-
-
+Keys now look like:
+        "if intro_input == "u":
+            gillnetRescue()"
 
 ### Unsolved Bugs
 
+- Could not add an 'esc' or 'quit' function without installing, importing and using the keyboard module. 
 
 ## Deployment
 

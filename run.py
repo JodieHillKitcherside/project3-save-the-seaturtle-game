@@ -221,9 +221,9 @@ def oilSpill():
     # Continue to vesselStrikeExit
     slowprint(
         "There's been an oil spill affecting your favourite"
-        + "corals! You are going to have to rest by the"
-        + "mangroves instead. Take a five minute rest and get"
-        + "back to swimming."
+        + " corals! You are going to have to rest by the"
+        + " mangroves instead. Take a five minute rest and get"
+        + " back to swimming."
         + emoji_choice.biohazard)
 
     vesselStrikeExit()
@@ -253,13 +253,12 @@ def introScene():
             gillnetRescue()
         elif intro_input == "d":
             tangledExit()
-        elif intro_input == "u":
+        elif intro_input == "r":
             oaxacaBeach()
         elif intro_input == "l":
             swimWithFriends()
         else:
-            print(
-                KeyError + "Please enter a valid key option"
+            print("Please enter a valid key option"
                 + "(lowercase only - u/d/l/r)")
     return intro_answer
 
