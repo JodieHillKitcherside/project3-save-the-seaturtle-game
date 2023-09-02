@@ -23,10 +23,6 @@ body {
     image-rendering: -moz-crisp-edges;
 }
 
-#footer {
-    display: flex;
-}
-
-footer a {
+#footer a {
     text-decoration: none;
 }
