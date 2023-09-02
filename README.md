@@ -16,11 +16,11 @@ This formatted in Python Script, styled as a text-based room exploration game. E
 ### Storyboard:
 
 This is a basic format used to structure the story for the game.  
-![Storyboard Flowchart](assets/images/planning_storyboard.png)
+![Storyboard Flowchart](documents/screenshots/planning/planning_storyboard.png)
 
 ### Flowchart planning 
 This is a basic structure plan for the code, mapping out the necessary functions to work from.  
-![Functions Flowchart](assets/images/planning_functions.png) 
+![Functions Flowchart](documents/screenshots/planning/planning_functions.png) 
 
 ## Existing Features
 
@@ -29,9 +29,10 @@ Inputs have been created to include the user in the game, adding to the user exp
 The name input is used throughout to draw reference back to the user.
 
 ### Code errors 
-Wrong or missing inputs will be identified and an error message and print statement will appear. 
+Wrong or missing inputs will be identified and an error message will appear. 
+![Input and error code](documents/screenshots/input-and-error-checks.jpg) 
 
-### If else functions
+### While if else functions
 Most next steps as you progress throughout the quiz provide a question with two directions to choose from in order to continue. If the user selects from either key, they will progress to the next step in the sea turtle's adventure. If there is another option selected, there will be an error message. 
 
 ## Features left to implement

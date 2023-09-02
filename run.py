@@ -143,9 +143,9 @@ def gillnetRescue():
     # Continue to rescueExit
     slowprint(
         "Oh! Unfortunately, you have been accidentally captured!"
-        + "You are stuck in gillnets and struggling to get out"
-        + "means you have deep cuts on your flippers..."
-        + "Fishermen are so sorry and have called ocean rescue!"
+        + " You are stuck in gillnets and struggling to get out"
+        + " means you have deep cuts on your flippers..."
+        + " Fishermen are so sorry and have called ocean rescue!"
         + emoji_choice.motorboat + emoji_choice.buoy)
     rescueExit()
 
@@ -198,9 +198,9 @@ def greatWhite():
     while True:
         shark_input = input(" Please choose your option:\n")
         shark_answer = shark_input.strip().lower()
-        if shark_input == "u":
+        if shark_input == "l":
             sharkBaitExit()
-        elif shark_input == "l":
+        elif shark_input == "u":
             balloonExit()
         else:
             print(KeyError + "Please enter a valid key option.")
