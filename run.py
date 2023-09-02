@@ -101,11 +101,11 @@ def vultureLurk():
         + " Choose either 'u'" + emoji_choice.e_up
         + " or choose 'r'" + emoji_choice.e_right)
     while True:
-        vulture_input = input("Please choose your option:\n")
+        vulture_input = input(" Please choose your option:\n")
         vulture_answer = vulture_input.strip().lower()
-        if value_input == "u":
+        if vuluture_input == "u":
             fleeExit()
-        elif value_input == "r":
+        elif vulture_input == "r":
             babiesSafe()
         else:
             print(KeyError + "Please enter a valid key option.")
@@ -129,8 +129,8 @@ def disoriented():
         "You seem a bit disorientated! Humans like to surf here and"
         + " this means the beach has changed so much since you were"
         + " first here, 20 years ago. Will you find a quiet place"
-        + " to protect your eggs?")
-        + emoji_choice.divingmask + emoji_choice.compass
+        + " to protect your eggs?"
+        + emoji_choice.divingmask + emoji_choice.compass)
     beachPartyExit()
 
 
@@ -145,8 +145,8 @@ def gillnetRescue():
         "Oh! Unfortunately, you have been accidentally captured!"
         + "You are stuck in gillnets and struggling to get out"
         + "means you have deep cuts on your flippers..."
-        + "Fishermen are so sorry and have called ocean rescue!")
-        + emoji_choice.motorboat + emoji_choice.buoy
+        + "Fishermen are so sorry and have called ocean rescue!"
+        + emoji_choice.motorboat + emoji_choice.buoy)
     rescueExit()
 
 
@@ -174,11 +174,11 @@ def swimWithFriends():
         + " Enter your option: 'u'" + emoji_choice.e_up
         + " or 'l'" + emoji_choice.e_left)
     while True:
-        swim_input = input("Please choose your option:\n")
+        swim_input = input(" Please choose your option:\n")
         swim_answer = swim_input.strip().lower()
-        if value_input == "u":
+        if swim_input == "u":
             greatWhite()
-        elif value_input == "l":
+        elif swim_input == "l":
             oilSpill()
         else:
             print(KeyError + "Please enter a valid key option.")
@@ -195,12 +195,12 @@ def greatWhite():
         + name
         + ", select your next option: 'u'" + emoji_choice.e_up
         + " or 'l'" + emoji_choice.e_left)
-    Wwhile True:
-        shark_input = input("Please choose your option:\n")
+    while True:
+        shark_input = input(" Please choose your option:\n")
         shark_answer = shark_input.strip().lower()
-        if value_input == "u":
+        if shark_input == "u":
             sharkBaitExit()
-        elif value_input == "l":
+        elif shark_input == "l":
             balloonExit()
         else:
             print(KeyError + "Please enter a valid key option.")
@@ -247,15 +247,15 @@ def introScene():
         + emoji_choice.e_up 
         + " Which way will you go next?")
     while True: 
-        intro_input = input("Please choose your option:\n")
+        intro_input = input(" Please choose your option:\n")
         intro_answer = intro_input.strip().lower()
-        if value_input == "u":
+        if intro_input == "u":
             gillnetRescue()
-        elif value_input == "d":
+        elif intro_input == "d":
             tangledExit()
-        elif value_input == "u":
+        elif intro_input == "u":
             oaxacaBeach()
-        elif value_input == "l":
+        elif intro_input == "l":
             swimWithFriends()
         else:
             print(
@@ -269,7 +269,7 @@ if __name__ == "__main__":
         "Welcome to the Save the Sea Turtle Game!"
         # ... [introductory text]
         + " Ahoy! As an endangered sea turtle, you are peacefully riding"
-        + "the Pacific Ocean. We are going to take you on an adventure!"
-        + "Watch out for the Great White Shark and other great terrors."
+        + " the Pacific Ocean. We are going to take you on an adventure!"
+        + " Watch out for the Great White Shark and other great terrors."
         + emoji_choice.whale + emoji_choice.dolphin + emoji_choice.okay) 
     main()
