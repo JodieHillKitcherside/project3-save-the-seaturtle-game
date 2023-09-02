@@ -7,10 +7,6 @@ The quiz' main target market group would be ideal for pre-teen or teenagers, who
 The game is story based, with four main options to choose the 'sea turtle's next move. This them passes on to various actions. 
 This formatted in Python Script, styled as a text-based room exploration game. Each option offers the user to use several keys to change direction, giving contol to the user to explore different sequences of the sea turtle's life.
 
-# User Feedback
-
-- ""
-
 # Features
 
 ### Storyboard:
@@ -25,8 +21,9 @@ This is a basic structure plan for the code, mapping out the necessary functions
 
 ### Storyline
 
-![Storyboard Flowchart](documents/screenshots/storyline/storyline-beach-exit.jpg)
-![Storyboard Flowchart](documents/screenshots/storyline/storyline-shark-exit.jpg)
+![Example of storyline - Beginning of Gillnets Rescue Exit](documents/screenshots/storyline/storyline-gillnets-begin.jpg)
+![Example of storyline - End of Gillnets Rescue Exit](documents/screenshots/storyline/storyline-gillnets-end.jpg)
+![Example of storyline - Vultures Babies Safe Exit](documents/screenshots/storyline/storyline-vultures-babies-safe.jpg)
 
 
 ## Existing Features
@@ -62,8 +59,8 @@ Most next steps as you progress throughout the quiz provide a question with two 
 
 ## Design
 
-Index.html displays a background image of a vivid colourful ocean bed. White headings and footer have been styled to stand out in the foreground. 
-Insert full heroku picture here. 
+Index.html displays a background image of a vivid colourful ocean bed. White headings and footer have been styled to stand out in the foreground. Opacity for the anchors have been set for readability.
+Background image was displayed particualrly to add feel to the user, as this game alone in a terminal and white background was too basic. The background adds to the sotry, making you feel like you are underwater with the seaturtle themself! 
 
 ### Validator Testing
 
@@ -85,7 +82,7 @@ Pylinter checks:
 
 ### Solved Bugs
 
-![Bugs] (documents/bugs/bugs.jpg)
+![Bugs](documents/bugs/bugs.jpg)
 
 ![Extensive Bugs](documents/bugs/key-arrows.jpg) 
 
@@ -96,7 +93,8 @@ Pylinter checks:
 ## Deployment
 
 The project was deployed using Code Institute's mock terminal for Heroku.
-
+Please view site here: [Save the Sea Turtles](https://save-the-turtles-20dc2dacc172.herokuapp.com/)
+)
 Please see the steps below exceuted:
 1. Go to heroku.com, ensure sign up and logged in 
 2. Click Create App
@@ -106,7 +104,7 @@ Please see the steps below exceuted:
 4. 	Deploy: 
 	- Deployment method - click deploy to GitHub
 	- Connect to GitHub and search repo name
-	- Enable automatic deploy or manual deploy
+	- Enable automatic deploy or manual 
 
 If you choose manual:
 - Review build master - check process and click link to view 
@@ -122,7 +120,7 @@ Python Tricks The Book - Dan Bader
 Invent Your Own Computer Games With Python - Al Sweigart 
 - 5 : Dragon Realm 
 
-https://www.geeksforgeeks.org/python-program-to-print-emojis/ - errors on unicode 
+[Errors on unicode](https://www.geeksforgeeks.org/python-program-to-print-emojis/)
 
 ### Tutor/mentor suggestions
 
@@ -130,6 +128,8 @@ https://www.geeksforgeeks.org/python-program-to-print-emojis/ - errors on unicod
 - Tutor Sean suggested a minor change for the beachPartyExitPrint() issue. After days of testing and rewriting, needed someone else's eyes even for such a basic mistake!
 
 ### Inspiration and content 
-https://www.iucnredlist.org/species/11534/3292503
-https://oliveridleyproject.org/threats-to-sea-turtles
+[ICUN Red List](https://www.iucnredlist.org/species/11534/3292503)
+[Olive Ridley Sea Turtles](https://oliveridleyproject.org/threats-to-sea-turtles)
+
+
 
