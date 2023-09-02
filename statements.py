@@ -7,27 +7,28 @@ Statements to excute from run.py slowPrintExit function
 """
 
 balloonExitPrint = [
-    "You swam up and out of sight!" + emoji_choice.shell
+    "You swam up and out of sight!" 
     + "But oops! You accidentally swallowed a balloon"
     + "You thought it was a jellyfish! Unlucky..."
-    + emoji_choice.jellyfish
     + "Let's hope that get's recycled out of your body"
     + "or it will be fatal.."
+    + emoji_choice.jellyfish + emoji_choice.shell
 ]
 
 
 tangledExitPrint = [
     "Bad storms mean that fishermen's nets are no longer drying"
     + "on the beach and made it into the water!"
-    + emoji_choice.tropicalfish
     + "Oops, you got tangled. You are on your"
-    "own in the deep ocean and nobody can help this time! :("
+    " own in the deep ocean and nobody can help this time! :("
+    + emoji_choice.tropicalfish
 ]
 
 
 sharkBaitExitPrint = [
     "He got you! You tried to get away but he's too fast."
     + "You're dead."
+    + emoji_choice.pirateflag
 ]
 
 
@@ -42,25 +43,23 @@ vesselStrikeExitPrint = [
 beachPartyExitPrint = [
     "Blast! The people are startling you."
     + "There is a beach party. There's nowhere to lay!"
+    + emoji_choice.blowfish
 ]
 
 
 babiesSafePrint = [
-    "Phew! You dug a deep nest and all the babies are safe!" +
-    emoji_choice.whiteheart
+    "Phew! You dug a deep nest and all the babies are safe!" 
     + "You tried so hard in the heat and wading through the thick sand."
-    + emoji_choice.clapping
-    + "Amazing, you have 100 baby turtle eggs protected!" +
-    emoji_choice.blowfish
+    + "Amazing, you have 100 baby turtle eggs protected!"
+    + emoji_choice.whiteheart + emoji_choice.clapping 
 ]
 
 
 fleeExitPrint = [
     "Vultures viciously circled and you fled back to the ocean!"
-    + emoji_choice.wave +
     "You're so lucky! You made it back to ride the tide!"
-    + emoji_choice.lightblueheart
     + "You can try again tomorrow."
+    + emoji_choice.wave + emoji_choice.lightblueheart
 ]
 
 

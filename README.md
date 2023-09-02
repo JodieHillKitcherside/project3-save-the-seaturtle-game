@@ -74,7 +74,10 @@ Index.html displays a background image of a vivid colourful ocean bed. White hea
 - Exit function would not work as parentheses included each individual function to call, fixed by calling main function, with all other functions inside. Thus, avoided repetition in code. Added a reusable function.
 
 - Emoji class use: All of attributes in the emojis.py file had the same names as methods, which conflicted and was 
-repeated code. Emojis.py has 1 class and calls the class in run.py and statements.py at the string ie. "+ emoji_choice.seaturtle".
+repeated code. Emojis.py has 
+1 class and calls the class in run.py and statements.py at the string ie. "+ emoji_choice.seaturtle".
+
+- User input: User input was appearing before the main intro, being called as a global variable and therefore have locally stored the named variable in each story statement.
 
 - Keyboard arrows:
 1. Goal: Download a module to support the keyboard arrows Up, Down, Right, Left. Solely for user experience and ease throughout the game. 
@@ -83,18 +86,14 @@ repeated code. Emojis.py has 1 class and calls the class in run.py and statement
 4. Further issues: 
 - Import error - script running as root; Backend error suggesting 'must use a root' whilst using the library on Linux. Based on answers from ChatGBT, installed a root with myenv in the backend files alongisde main files. 
 - After looking closely to the traceback message, identifieid the source error: 'event = keyboard.read_event()  # Capture a keyboard event' (a line of code that hadn't been removed after several other testing tried in (2) above.)
-- Result: Running 'if keyboard.is_pressed("u") == ' instead. 
+- Result: Running 'if keyboard.is_pressed("u")' instead. 
+- Still errors with keyboard: ImportError: You must be root to use this library on linux. Probably due to using Mac - https://stackabuse.com/guide-to-pythons-keyboard-module/. Then showed an't open file 'my_script.py': [Errno 2] No such file or directory. 
+- Result: Completely uninstalled keyboard and reverted to basic user input. 
+
 
 
 
 ### Unsolved Bugs
-
-
-
-https://stackoverflow.com/questions/7053971/python-trouble-using-escape-key-to-exit
-https://stackoverflow.com/questions/25494726/how-to-use-pygame-keydown-to-execute-something-every-time-through-a-loop-while-t
-https://stackoverflow.com/questions/56844378/pylint-no-member-issue-but-code-still-works-vscode
-https://github.com/Rabbid76/PyGameExamplesAndAnswers/blob/master/documentation/pygame/pygame_keys_and_keyboard_event.md
 
 
 ## Deployment

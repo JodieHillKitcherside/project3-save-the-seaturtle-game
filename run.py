@@ -17,24 +17,16 @@ from emojis import Emoji
 
 def slowprint(all_strings):
     # Styling all strings with a delayed type time
-    for each_character in all_strings + "\n":
+    for each_character in all_strings:
         sys.stdout.write(each_character)
         sys.stdout.flush()
         time.sleep(1/17)
 
 
-def escape():
-    # Implementing a hotkey
-    if event.name == 'esc':
-        return main()
-    else:
-        None
-
-
 def check_user_input(input_str):
     # Validates all user input
     # Prints prompt if blank
-    if event.name == "":
+    if user_input == "":
         print("Please enter your input")
     else:
         None
@@ -57,14 +49,13 @@ def main():
 def exit():
     # Exit function exits the game
     slowprint(
-        "GAME OVER" + name + emoji_choice.skull +
+        " GAME OVER " + name + emoji_choice.skull +
         "Well done on getting that far. I'm sure you've worked out by now" +
-        "that unfortunately sea turtles face many threats to their survival" +
-        "and although some are natural - most are human threats." +
-        emoji_choice.pirateflag +
-        "If you survived, you're made of strong stuff. It's estimated that" +
-        "only 1 in 1000 sea turtles make it to adult turtle."
-        + emoji_choice.seaturtle)
+        " that unfortunately sea turtles face many threats to their survival" +
+        " and although some are natural - most are human threats." +
+        " If you survived, you're made of strong stuff. It's estimated that" +
+        " only 1 in 1000 sea turtles make it to adult turtle."
+        + emoji_choice.pirateflag + emoji_choice.seaturtle)
     sys.exit()
 
 
@@ -81,19 +72,22 @@ def oaxacaBeach():
     # Based on down, proceed to disoriented
     slowprint(
         "Wow mama! You have many eggs to lay, you've" +
-        "ended up swimming"
-        + emoji_choice.egg
-        + "to Oaxaca Beach! Lets see if you can protect"
-        + "them all!" + emoji_choice.mexico
+        "ended up swimming to Oaxaca Beach!" 
+        " Lets see if you can protect them all!" 
+        + emoji_choice.mexico + emoji_choice.egg
         + " Select your next option:"
         + " Choose either 'l'" + emoji_choice.e_left
         + " or choose 'd'" + emoji_choice.e_down)
-    if keyboard.is_pressed("l"):
-        vultureLurk()
-    elif keyboard.is_pressed("d")::
-        disoriented()
-    else:
-        print(KeyError + "Please enter a valid key option.")
+    while True:
+        oaxaca_input = input("Please choose your option:\n")
+        oaxaca_answer = oaxaca_input.strip().lower()
+        if oaxaca_input == "l":
+            vultureLurk()
+        elif oaxaca_input == "d":
+            disoriented()
+        else:
+            print(KeyError + "Please enter a valid key option.")
+    return oaxaca_answer
 
 
 def vultureLurk():
@@ -101,18 +95,22 @@ def vultureLurk():
     # Based on up, proceed to fleeExit
     # Based on right, proceed to babiesSafe
     slowprint(
-        "Watch out! Vultures are out to attack!" +
-        emoji_choice.vulture
+        "Watch out! Vultures are out to attack!" 
+        + emoji_choice.vulture
         + name + ", select your next option:"
         + " Choose either 'u'" + emoji_choice.e_up
         + " or choose 'r'" + emoji_choice.e_right)
-    if keyboard.is_pressed("u"):
-        fleeExit()
-    elif keyboard.is_pressed("r"):
-        babiesSafe()
-    else:
-        print(KeyError + "Please enter a valid key option.")
-    vultureLurk()
+    while True:
+        vulture_input = input("Please choose your option:\n")
+        vulture_answer = vulture_input.strip().lower()
+        if value_input == "u":
+            fleeExit()
+        elif value_input == "r":
+            babiesSafe()
+        else:
+            print(KeyError + "Please enter a valid key option.")
+        vultureLurk()
+    return vulture_answer
 
 
 def babiesSafe():
@@ -129,11 +127,10 @@ def disoriented():
     # Continue to beachPartExit
     slowprint(
         "You seem a bit disorientated! Humans like to surf here and"
-        + emoji_choice.divingmask
-        + "this means the beach has changed so much since you were"
-        + emoji_choice.compass
-        + "first here, 20 years ago. Will you find a quiet place"
-        "to protect your eggs?")
+        + " this means the beach has changed so much since you were"
+        + " first here, 20 years ago. Will you find a quiet place"
+        + " to protect your eggs?")
+        + emoji_choice.divingmask + emoji_choice.compass
     beachPartyExit()
 
 
@@ -146,11 +143,10 @@ def gillnetRescue():
     # Continue to rescueExit
     slowprint(
         "Oh! Unfortunately, you have been accidentally captured!"
-        + emoji_choice.motorboat
         + "You are stuck in gillnets and struggling to get out"
-        + emoji_choice.buoy
         + "means you have deep cuts on your flippers..."
         + "Fishermen are so sorry and have called ocean rescue!")
+        + emoji_choice.motorboat + emoji_choice.buoy
     rescueExit()
 
 
@@ -170,20 +166,23 @@ def swimWithFriends():
     # Based on left, proceed to oilSpill
     slowprint(
         "Looks like you've found some friends! you are swimming around"
-        + emoji_choice.jellyfish
-        + "kelp, little fishes and terrible claw lobsters."
+        + " kelp, little fishes and terrible claw lobsters."
+        + " Woah!There is lots of food here!"
+        + emoji_choice.crab + emoji_choice.jellyfish
         + emoji_choice.lobster
-        + "Woah!There is lots of food here!"
-        + emoji_choice.crab
-        + "Which way will you go?"
+        + " Which way will you go?"
         + " Enter your option: 'u'" + emoji_choice.e_up
         + " or 'l'" + emoji_choice.e_left)
-    if keyboard.is_pressed("u"):
-        greatWhite()
-    elif keyboard.is_pressed("l"):
-        oilSpill()
-    else:
-        print(KeyError + "Please enter a valid key option.")
+    while True:
+        swim_input = input("Please choose your option:\n")
+        swim_answer = swim_input.strip().lower()
+        if value_input == "u":
+            greatWhite()
+        elif value_input == "l":
+            oilSpill()
+        else:
+            print(KeyError + "Please enter a valid key option.")
+    return swim_answer
 
 
 def greatWhite():
@@ -196,12 +195,16 @@ def greatWhite():
         + name
         + ", select your next option: 'u'" + emoji_choice.e_up
         + " or 'l'" + emoji_choice.e_left)
-    if keyboard.is_pressed("u"):
-        sharkBaitExit()
-    elif keyboard.is_pressed("l"):
-        balloonExit()
-    else:
-        print(KeyError + "Please enter a valid key option.")
+    Wwhile True:
+        shark_input = input("Please choose your option:\n")
+        shark_answer = shark_input.strip().lower()
+        if value_input == "u":
+            sharkBaitExit()
+        elif value_input == "l":
+            balloonExit()
+        else:
+            print(KeyError + "Please enter a valid key option.")
+    return shark_answer
 
 
 def sharkBaitExit():
@@ -218,11 +221,11 @@ def oilSpill():
     # Continue to vesselStrikeExit
     slowprint(
         "There's been an oil spill affecting your favourite"
-        + emoji_choice.biohazard
         + "corals! You are going to have to rest by the"
-        + emoji_choice.reef
         + "mangroves instead. Take a five minute rest and get"
-        + "back to swimming.")
+        + "back to swimming."
+        + emoji_choice.biohazard)
+
     vesselStrikeExit()
 
 
@@ -240,22 +243,25 @@ def introScene():
         + " Your options are on your keyboard."
         + " Throughout this adventure, all you need to tap is:"
         + " 'u' button for Up, 'd' button for Down, 'l' button for Left"
-        + " or 'r' button for Right"
-        + " And if you would like to escape anytime - hit escape!"
-        + " Which way will you go next?"
-        + " Enter key")
-    if keyboard.is_pressed("u"):
-        gillnetRescue()
-    elif keyboard.is_pressed("d"):
-        tangledExit()
-    elif keyboard.is_pressed("l")::
-        oaxacaBeach()
-    elif keyboard.is_pressed("r"):
-        swimWithFriends()
-    else:
-        print(
-            KeyError + "Please enter a valid key option"
-            + "(lowercase only - u/d/l/r)")
+        + " or 'r' button for Right - then hit Enter"
+        + emoji_choice.e_up 
+        + " Which way will you go next?")
+    while True: 
+        intro_input = input("Please choose your option:\n")
+        intro_answer = intro_input.strip().lower()
+        if value_input == "u":
+            gillnetRescue()
+        elif value_input == "d":
+            tangledExit()
+        elif value_input == "u":
+            oaxacaBeach()
+        elif value_input == "l":
+            swimWithFriends()
+        else:
+            print(
+                KeyError + "Please enter a valid key option"
+                + "(lowercase only - u/d/l/r)")
+    return intro_answer
 
 
 if __name__ == "__main__":
@@ -263,9 +269,7 @@ if __name__ == "__main__":
         "Welcome to the Save the Sea Turtle Game!"
         # ... [introductory text]
         + " Ahoy! As an endangered sea turtle, you are peacefully riding"
-        + emoji_choice.whale
         + "the Pacific Ocean. We are going to take you on an adventure!"
-        + emoji_choice.dolphin
         + "Watch out for the Great White Shark and other great terrors."
-        + emoji_choice.okay)
+        + emoji_choice.whale + emoji_choice.dolphin + emoji_choice.okay) 
     main()
