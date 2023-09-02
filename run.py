@@ -76,12 +76,12 @@ def oaxacaBeach():
         " Lets see if you can protect them all!" 
         + emoji_choice.egg
         + " Select your next option:"
-        + " Choose either 'l'" + emoji_choice.e_left
+        + " Choose either 'r'" + emoji_choice.e_right
         + " or choose 'd'" + emoji_choice.e_down)
     while True:
         oaxaca_input = input("Please choose your option:\n")
         oaxaca_answer = oaxaca_input.strip().lower()
-        if oaxaca_input == "l":
+        if oaxaca_input == "r":
             vultureLurk()
         elif oaxaca_input == "d":
             disoriented()

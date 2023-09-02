@@ -27,15 +27,15 @@ tangledExitPrint = [
 
 sharkBaitExitPrint = [
     "He got you! You tried to get away but he's too fast."
-    + "You're dead."
+    + " You're dead."
     + emoji_choice.pirateflag
 ]
 
 
 vesselStrikeExitPrint = [
     "Poor you! A boat came to watch sealions near by your"
-    + "new favourite spot! the boat It's colided with a pod"
-    + "of seals. You haven't been able to reach the surface this time!"
+    + " new favourite spot! the boat It's colided with a pod"
+    + " of seals. You haven't been able to reach the surface this time!"
     + emoji_choice.seal
 ]
 
