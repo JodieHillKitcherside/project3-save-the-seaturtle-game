@@ -19,10 +19,12 @@ This is a basic format used to structure the story for the game.
 ![Storyboard Flowchart](documents/screenshots/planning/planning_storyboard.png)
 
 ### Flowchart planning 
+
 This is a basic structure plan for the code, mapping out the necessary functions to work from.  
 ![Functions Flowchart](documents/screenshots/planning/planning_functions.png) 
 
 ### Storyline
+
 ![Storyboard Flowchart](documents/screenshots/storyline/storyline-beach-exit.jpg)
 ![Storyboard Flowchart](documents/screenshots/storyline/storyline-shark-exit.jpg)
 ![Storyboard Flowchart](documents/screenshots/planning/planning_storyboard.png)
